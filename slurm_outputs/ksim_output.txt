@@ -1,7 +1,8 @@
 Running from directory: /cluster/work/sebasrb/ksim-gym-example
 Job name: ksim-zbot-train
-Job ID: 23099772
+Job ID: 23099776
 Node(s): idun-01-03
+Defaulting to user installation because normal site-packages is not writeable
 Requirement already satisfied: ksim==0.1.3 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.1.3)
 Requirement already satisfied: xax==0.3.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.3.0)
 Requirement already satisfied: mujoco-scenes in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (0.0.16)
@@ -9,13 +10,13 @@ Requirement already satisfied: jupyter in /cluster/home/sebasrb/.local/lib/pytho
 Requirement already satisfied: ipykernel in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 13)) (6.30.1)
 Requirement already satisfied: pre-commit in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 14)) (4.3.0)
 Requirement already satisfied: kinfer[jax] in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 9)) (0.5.6)
-Requirement already satisfied: numpy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (1.26.4)
+Requirement already satisfied: numpy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (2.3.3)
 Requirement already satisfied: matplotlib in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (3.10.6)
 Requirement already satisfied: tqdm in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (4.67.1)
 Requirement already satisfied: tabulate in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.9.0)
 Requirement already satisfied: kscale in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.3.18)
 Requirement already satisfied: distrax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.1.7)
-Requirement already satisfied: jax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.4.20)
+Requirement already satisfied: jax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.4.28)
 Requirement already satisfied: mediapy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (1.2.4)
 Requirement already satisfied: optax in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.2.6)
 Requirement already satisfied: scipy in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (1.16.2)
@@ -41,6 +42,8 @@ Requirement already satisfied: onnx in /cluster/home/sebasrb/.local/lib/python3.
 Requirement already satisfied: onnxruntime==1.20.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 9)) (1.20.0)
 Requirement already satisfied: tensorflow in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 9)) (2.19.1)
 Requirement already satisfied: tf2onnx>=1.16.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 9)) (1.16.1)
+Collecting numpy (from ksim==0.1.3->-r requirements.txt (line 4))
+  Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
 Requirement already satisfied: coloredlogs in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (15.0.1)
 Requirement already satisfied: flatbuffers in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (25.9.23)
 Requirement already satisfied: packaging in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (25.0)
@@ -219,334 +222,106 @@ Requirement already satisfied: mdurl~=0.1 in /cluster/home/sebasrb/.local/lib/py
 Requirement already satisfied: lark>=1.2.2 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.3.0)
 Requirement already satisfied: arrow>=0.15.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.3.0)
 Requirement already satisfied: types-python-dateutil>=2.8.10 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (2.9.0.20250822)
+Using cached numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
 Using cached jax-0.7.1-py3-none-any.whl (2.8 MB)
 Using cached jaxlib-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl (81.1 MB)
-Installing collected packages: jaxlib, jax
-  Attempting uninstall: jaxlib
-    Found existing installation: jaxlib 0.4.20
-    Uninstalling jaxlib-0.4.20:
-      Successfully uninstalled jaxlib-0.4.20
-  Attempting uninstall: jax
-    Found existing installation: jax 0.4.20
-    Uninstalling jax-0.4.20:
-      Successfully uninstalled jax-0.4.20
-Successfully installed jax-0.7.1 jaxlib-0.7.1
-Collecting jax==0.4.28 (from jax[cuda12]==0.4.28)
-  Downloading jax-0.4.28-py3-none-any.whl.metadata (23 kB)
-Collecting jaxlib==0.4.28 (from jaxlib[cuda12]==0.4.28)
-  Downloading jaxlib-0.4.28-cp311-cp311-manylinux2014_x86_64.whl.metadata (1.8 kB)
-Collecting ml-dtypes>=0.2.0 (from jax==0.4.28->jax[cuda12]==0.4.28)
-  Using cached ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
-Collecting numpy>=1.22 (from jax==0.4.28->jax[cuda12]==0.4.28)
-  Using cached numpy-2.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
-Collecting opt-einsum (from jax==0.4.28->jax[cuda12]==0.4.28)
-  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
-Collecting scipy>=1.9 (from jax==0.4.28->jax[cuda12]==0.4.28)
-  Using cached scipy-1.16.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
-Collecting jax-cuda12-plugin==0.4.28 (from jax[cuda12]==0.4.28)
-  Downloading jax_cuda12_plugin-0.4.28-cp311-cp311-manylinux2014_x86_64.whl.metadata (560 bytes)
-Collecting nvidia-cublas-cu12>=12.1.3.1 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
-Collecting nvidia-cuda-cupti-cu12>=12.1.105 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_cuda_cupti_cu12-12.9.79-py3-none-manylinux_2_25_x86_64.whl.metadata (1.8 kB)
-Collecting nvidia-cuda-nvcc-cu12>=12.1.105 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_cuda_nvcc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
-Collecting nvidia-cuda-runtime-cu12>=12.1.105 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
-Collecting nvidia-cudnn-cu12<9.0,>=8.9.2.26 (from jax[cuda12]==0.4.28)
-  Downloading nvidia_cudnn_cu12-8.9.7.29-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
-Collecting nvidia-cufft-cu12>=11.0.2.54 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_cufft_cu12-11.4.1.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
-Collecting nvidia-cusolver-cu12>=11.4.5.107 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
-Collecting nvidia-cusparse-cu12>=12.1.0.106 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
-Collecting nvidia-nccl-cu12>=2.18.1 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_nccl_cu12-2.28.3-py3-none-manylinux_2_18_x86_64.whl.metadata (2.0 kB)
-Collecting nvidia-nvjitlink-cu12>=12.1.105 (from jax[cuda12]==0.4.28)
-  Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
-Collecting jax-cuda12-pjrt==0.4.28 (from jax-cuda12-plugin==0.4.28->jax[cuda12]==0.4.28)
-  Downloading jax_cuda12_pjrt-0.4.28-py3-none-manylinux2014_x86_64.whl.metadata (349 bytes)
-Collecting nvidia-cuda-nvrtc-cu12 (from nvidia-cudnn-cu12<9.0,>=8.9.2.26->jax[cuda12]==0.4.28)
-  Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
-Downloading jax-0.4.28-py3-none-any.whl (1.9 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 6.3 MB/s eta 0:00:00
-Downloading jaxlib-0.4.28-cp311-cp311-manylinux2014_x86_64.whl (77.5 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.5/77.5 MB 8.5 MB/s eta 0:00:00
-Downloading jax_cuda12_plugin-0.4.28-cp311-cp311-manylinux2014_x86_64.whl (12.4 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 9.2 MB/s eta 0:00:00
-Downloading jax_cuda12_pjrt-0.4.28-py3-none-manylinux2014_x86_64.whl (86.8 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 MB 6.8 MB/s eta 0:00:00
-Using cached ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
-Using cached numpy-2.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
-Using cached nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl (581.2 MB)
-Using cached nvidia_cuda_cupti_cu12-12.9.79-py3-none-manylinux_2_25_x86_64.whl (10.8 MB)
-Using cached nvidia_cuda_nvcc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.5 MB)
-Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.5 MB)
-Downloading nvidia_cudnn_cu12-8.9.7.29-py3-none-manylinux1_x86_64.whl (704.7 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 704.7/704.7 MB 89.1 MB/s eta 0:00:00
-Using cached nvidia_cufft_cu12-11.4.1.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (200.9 MB)
-Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl (338.1 MB)
-Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (366.5 MB)
-Using cached nvidia_nccl_cu12-2.28.3-py3-none-manylinux_2_18_x86_64.whl (295.9 MB)
-Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.7 MB)
-Using cached scipy-1.16.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
-Using cached opt_einsum-3.4.0-py3-none-any.whl (71 kB)
-Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (89.6 MB)
-Installing collected packages: jax-cuda12-pjrt, opt-einsum, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-nvcc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, jax-cuda12-plugin, scipy, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, ml-dtypes, nvidia-cusolver-cu12, jaxlib, jax
-  Attempting uninstall: opt-einsum
-    Found existing installation: opt_einsum 3.4.0
-    Uninstalling opt_einsum-3.4.0:
-      Successfully uninstalled opt_einsum-3.4.0
+Installing collected packages: numpy, jaxlib, jax
   Attempting uninstall: numpy
-    Found existing installation: numpy 1.26.4
-    Uninstalling numpy-1.26.4:
-      Successfully uninstalled numpy-1.26.4
-  Attempting uninstall: scipy
-    Found existing installation: scipy 1.16.2
-    Uninstalling scipy-1.16.2:
-      Successfully uninstalled scipy-1.16.2
-  Attempting uninstall: ml-dtypes
-    Found existing installation: ml_dtypes 0.5.3
-    Uninstalling ml_dtypes-0.5.3:
-      Successfully uninstalled ml_dtypes-0.5.3
+    Found existing installation: numpy 2.3.3
+    Uninstalling numpy-2.3.3:
+      Successfully uninstalled numpy-2.3.3
   Attempting uninstall: jaxlib
-    Found existing installation: jaxlib 0.7.1
-    Uninstalling jaxlib-0.7.1:
-      Successfully uninstalled jaxlib-0.7.1
+    Found existing installation: jaxlib 0.4.28
+    Uninstalling jaxlib-0.4.28:
+      Successfully uninstalled jaxlib-0.4.28
   Attempting uninstall: jax
-    Found existing installation: jax 0.7.1
-    Uninstalling jax-0.7.1:
-      Successfully uninstalled jax-0.7.1
-Successfully installed jax-0.4.28 jax-cuda12-pjrt-0.4.28 jax-cuda12-plugin-0.4.28 jaxlib-0.4.28 ml-dtypes-0.5.3 numpy-2.3.3 nvidia-cublas-cu12-12.9.1.4 nvidia-cuda-cupti-cu12-12.9.79 nvidia-cuda-nvcc-cu12-12.9.86 nvidia-cuda-nvrtc-cu12-12.9.86 nvidia-cuda-runtime-cu12-12.9.79 nvidia-cudnn-cu12-8.9.7.29 nvidia-cufft-cu12-11.4.1.4 nvidia-cusolver-cu12-11.7.5.82 nvidia-cusparse-cu12-12.5.10.65 nvidia-nccl-cu12-2.28.3 nvidia-nvjitlink-cu12-12.9.86 opt-einsum-3.4.0 scipy-1.16.2
-Installed dependencies:
-Package                      Version
----------------------------- ------------------
-absl-py                      2.3.1
-aiofiles                     24.1.0
-aiohappyeyeballs             2.6.1
-aiohttp                      3.12.15
-aiosignal                    1.4.0
-annotated-types              0.7.0
-antlr4-python3-runtime       4.9.3
-anyio                        4.11.0
-argon2-cffi                  25.1.0
-argon2-cffi-bindings         25.1.0
-arrow                        1.3.0
-asttokens                    3.0.0
-astunparse                   1.6.3
-async-lru                    2.0.5
-attrs                        25.3.0
-babel                        2.17.0
-beautifulsoup4               4.14.2
-bleach                       6.2.0
-bvhio                        1.5.3
-certifi                      2025.8.3
-cffi                         2.0.0
-cfgv                         3.4.0
-charset-normalizer           3.4.3
-chex                         0.1.91
-click                        8.3.0
-cloudpickle                  3.1.1
-coloredlogs                  15.0.1
-colorlogging                 0.0.2
-comm                         0.2.3
-contourpy                    1.3.3
-cryptography                 46.0.1
-cycler                       0.12.1
-debugpy                      1.8.17
-decorator                    5.2.1
-defusedxml                   0.7.1
-distlib                      0.4.0
-distrax                      0.1.7
-dm-tree                      0.1.9
-dnspython                    2.8.0
-dpshdl                       0.0.21
-email-validator              2.3.0
-equinox                      0.13.0
-etils                        1.13.0
-executing                    2.2.1
-fastjsonschema               2.21.2
-filelock                     3.19.1
-flatbuffers                  25.9.23
-fonttools                    4.60.1
-fqdn                         1.5.1
-frozenlist                   1.7.0
-fsspec                       2025.9.0
-gast                         0.6.0
-gitdb                        4.0.12
-GitPython                    3.1.45
-glfw                         2.10.0
-google-pasta                 0.2.0
-grpcio                       1.75.1
-h11                          0.16.0
-h5py                         3.14.0
-httpcore                     1.0.9
-httpx                        0.28.1
-humanfriendly                10.0
-humanize                     4.13.0
-identify                     2.6.14
-idna                         3.10
-importlib_resources          6.5.2
-ipykernel                    6.30.1
-ipython                      9.6.0
-ipython_pygments_lexers      1.1.1
-ipywidgets                   8.1.7
-isoduration                  20.11.0
-jax                          0.4.28
-jax-cuda12-pjrt              0.4.28
-jax-cuda12-plugin            0.4.28
-jaxlib                       0.4.28
-jaxtyping                    0.3.2
-jedi                         0.19.2
-Jinja2                       3.1.6
-json5                        0.12.1
-jsonpointer                  3.0.0
-jsonschema                   4.25.1
-jsonschema-specifications    2025.9.1
-jupyter                      1.1.1
-jupyter_client               8.6.3
-jupyter-console              6.6.3
-jupyter_core                 5.8.1
-jupyter-events               0.12.0
-jupyter-lsp                  2.3.0
-jupyter_server               2.17.0
-jupyter_server_terminals     0.5.3
-jupyterlab                   4.4.9
-jupyterlab_pygments          0.3.0
-jupyterlab_server            2.27.3
-jupyterlab_widgets           3.0.15
-keras                        3.11.3
-kinfer                       0.5.6
-kiwisolver                   1.4.9
-kscale                       0.3.18
-ksim                         0.1.3
-lark                         1.3.0
-libclang                     18.1.1
-Markdown                     3.9
-markdown-it-py               4.0.0
-MarkupSafe                   3.0.3
-matplotlib                   3.10.6
-matplotlib-inline            0.1.7
-mdurl                        0.1.2
-mediapy                      1.2.4
-mistune                      3.1.4
-ml_dtypes                    0.5.3
-mpmath                       1.3.0
-msgpack                      1.1.1
-mujoco                       3.3.6
-mujoco-mjx                   3.3.6
-mujoco-scenes                0.0.16
-multidict                    6.6.4
-namex                        0.1.0
-nbclient                     0.10.2
-nbconvert                    7.16.6
-nbformat                     5.10.4
-nest-asyncio                 1.6.0
-nodeenv                      1.9.1
-notebook                     7.4.7
-notebook_shim                0.2.4
-numpy                        2.3.3
-nvidia-cublas-cu12           12.9.1.4
-nvidia-cuda-cupti-cu12       12.9.79
-nvidia-cuda-nvcc-cu12        12.9.86
-nvidia-cuda-nvrtc-cu12       12.9.86
-nvidia-cuda-runtime-cu12     12.9.79
-nvidia-cudnn-cu12            8.9.7.29
-nvidia-cufft-cu12            11.4.1.4
-nvidia-cusolver-cu12         11.7.5.82
-nvidia-cusparse-cu12         12.5.10.65
-nvidia-nccl-cu12             2.28.3
-nvidia-nvjitlink-cu12        12.9.86
-omegaconf                    2.3.0
-onnx                         1.17.0
-onnxruntime                  1.20.0
-opt_einsum                   3.4.0
-optax                        0.2.6
-optree                       0.17.0
-orbax-checkpoint             0.11.25
-overrides                    7.7.0
-packaging                    25.0
-pandocfilters                1.5.1
-parso                        0.8.5
-pexpect                      4.9.0
-pillow                       11.3.0
-platformdirs                 4.4.0
-pre_commit                   4.3.0
-prometheus_client            0.23.1
-prompt_toolkit               3.0.52
-propcache                    0.3.2
-protobuf                     3.20.3
-psutil                       7.1.0
-ptyprocess                   0.7.0
-pure_eval                    0.2.3
-pycparser                    2.23
-pydantic                     2.11.9
-pydantic_core                2.33.2
-pyglm                        2.8.2
-Pygments                     2.19.2
-PyJWT                        2.10.1
-PyOpenGL                     3.1.10
-pyparsing                    3.2.5
-python-dateutil              2.9.0.post0
-python-json-logger           3.3.0
-PyYAML                       6.0.3
-pyzmq                        27.1.0
-referencing                  0.36.2
-requests                     2.32.5
-rfc3339-validator            0.1.4
-rfc3986-validator            0.1.1
-rfc3987-syntax               1.1.0
-rich                         14.1.0
-rpds-py                      0.27.1
-scipy                        1.16.2
-Send2Trash                   1.8.3
-simplejson                   3.20.2
-six                          1.17.0
-smmap                        5.0.2
-sniffio                      1.3.1
-soupsieve                    2.8
-spatial-transform            1.3.1
-stack-data                   0.6.3
-sympy                        1.14.0
-tabulate                     0.9.0
-tensorboard                  2.19.0
-tensorboard-data-server      0.7.2
-tensorflow                   2.19.1
-tensorflow-io-gcs-filesystem 0.37.1
-tensorstore                  0.1.77
-termcolor                    3.1.0
-terminado                    0.18.1
-tf2onnx                      1.16.1
-tfp-nightly                  0.26.0.dev20250930
-tinycss2                     1.4.0
-toolz                        1.0.0
-tornado                      6.5.2
-tqdm                         4.67.1
-traitlets                    5.14.3
-trimesh                      4.8.3
-types-python-dateutil        2.9.0.20250822
-typing_extensions            4.15.0
-typing-inspection            0.4.1
-uri-template                 1.3.0
-urllib3                      2.5.0
-virtualenv                   20.34.0
-wadler_lindig                0.1.7
-wcwidth                      0.2.14
-webcolors                    24.11.1
-webencodings                 0.5.1
-websocket-client             1.8.0
-Werkzeug                     3.1.3
-widgetsnbextension           4.0.14
-wrapt                        1.17.3
-xax                          0.3.0
-yarl                         1.20.1
-zipp                         3.23.0
-Checking JAX backend:
-JAX version: 0.4.28
-JAX backend: gpu
-JAX devices: [cuda(id=0)]
-Set MUJOCO_GL=osmesa for headless rendering
+    Found existing installation: jax 0.4.28
+    Uninstalling jax-0.4.28:
+      Successfully uninstalled jax-0.4.28
+Successfully installed jax-0.7.1 jaxlib-0.7.1 numpy-1.26.4
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: jax[cuda12] in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (0.7.1)
+Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
+Requirement already satisfied: ml_dtypes>=0.5.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
+Requirement already satisfied: numpy>=1.26 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (1.26.4)
+Requirement already satisfied: opt_einsum in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (3.4.0)
+Requirement already satisfied: scipy>=1.12 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax[cuda12]) (1.16.2)
+Collecting jax-cuda12-plugin<=0.7.1,>=0.7.1 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached jax_cuda12_plugin-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (2.0 kB)
+Collecting jax-cuda12-pjrt==0.7.1 (from jax-cuda12-plugin<=0.7.1,>=0.7.1->jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached jax_cuda12_pjrt-0.7.1-py3-none-manylinux_2_27_x86_64.whl.metadata (579 bytes)
+Requirement already satisfied: nvidia-cublas-cu12>=12.1.3.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.1.4)
+Requirement already satisfied: nvidia-cuda-cupti-cu12>=12.1.105 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.79)
+Requirement already satisfied: nvidia-cuda-nvcc-cu12>=12.6.85 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-cuda-runtime-cu12>=12.1.105 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.79)
+Collecting nvidia-cudnn-cu12<10.0,>=9.8 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cudnn_cu12-9.13.1.26-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Requirement already satisfied: nvidia-cufft-cu12>=11.0.2.54 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (11.4.1.4)
+Requirement already satisfied: nvidia-cusolver-cu12>=11.4.5.107 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (11.7.5.82)
+Requirement already satisfied: nvidia-cusparse-cu12>=12.1.0.106 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.5.10.65)
+Requirement already satisfied: nvidia-nccl-cu12>=2.18.1 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (2.28.3)
+Requirement already satisfied: nvidia-nvjitlink-cu12>=12.1.105 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12>=12.1.55 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Collecting nvidia-nvshmem-cu12>=3.2.5 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Using cached jax_cuda12_plugin-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl (5.1 MB)
+Using cached jax_cuda12_pjrt-0.7.1-py3-none-manylinux_2_27_x86_64.whl (123.1 MB)
+Using cached nvidia_cudnn_cu12-9.13.1.26-py3-none-manylinux_2_27_x86_64.whl (644.3 MB)
+Using cached nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (139.1 MB)
+Installing collected packages: jax-cuda12-pjrt, nvidia-nvshmem-cu12, nvidia-cudnn-cu12, jax-cuda12-plugin
+  Attempting uninstall: jax-cuda12-pjrt
+    Found existing installation: jax-cuda12-pjrt 0.4.28
+    Uninstalling jax-cuda12-pjrt-0.4.28:
+      Successfully uninstalled jax-cuda12-pjrt-0.4.28
+  Attempting uninstall: nvidia-cudnn-cu12
+    Found existing installation: nvidia-cudnn-cu12 8.9.7.29
+    Uninstalling nvidia-cudnn-cu12-8.9.7.29:
+      Successfully uninstalled nvidia-cudnn-cu12-8.9.7.29
+  Attempting uninstall: jax-cuda12-plugin
+    Found existing installation: jax-cuda12-plugin 0.4.28
+    Uninstalling jax-cuda12-plugin-0.4.28:
+      Successfully uninstalled jax-cuda12-plugin-0.4.28
+Successfully installed jax-cuda12-pjrt-0.7.1 jax-cuda12-plugin-0.4.28 nvidia-cudnn-cu12-9.13.1.26 nvidia-nvshmem-cu12-3.4.5
+Failed to import warp: No module named 'warp'
+Failed to import mujoco.mjx.third_party.mujoco_warp as mujoco_warp: No module named 'warp'
+  [1;36mINFO[0m  [90m2025-09-30 20:05:24[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-09-30 20:05:24[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-09-30 20:05:24[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+ [1;31mERROR[0m  [90m2025-09-30 20:05:24[0m [[1;34mjax._src.xla_bridge[0m] Jax plugin configuration error: Exception when calling jax_plugins.xla_cuda12.initialize()
+Traceback (most recent call last):
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/__init__.py", line 201, in _version_check
+    version = get_version()
+              ^^^^^^^^^^^^^
+RuntimeError: jaxlib/cuda/versions_helpers.cc:81: operation cusparseGetProperty(MAJOR_VERSION, &major) failed: The cuSPARSE library was not found.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 485, in discover_pjrt_plugins
+    plugin_module.initialize()
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/__init__.py", line 328, in initialize
+    _check_cuda_versions(raise_on_first_error=True)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/__init__.py", line 266, in _check_cuda_versions
+    _version_check("cuSPARSE", cuda_versions.cusparse_get_version,
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/__init__.py", line 205, in _version_check
+    raise RuntimeError(err_msg) from e
+RuntimeError: Unable to load cuSPARSE. Is it installed?
+  [1;36mINFO[0m  [90m2025-09-30 20:05:24[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+[1;33mWARNING[0m [90m2025-09-30 20:05:24[0m [[1;34mjax._src.xla_bridge[0m] An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+ [1;32mSTATUS[0m [90m2025-09-30 20:05:24[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_4
+{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_4", "filename": "artifacts.py", "lineno": 83}}
+ [1;32mSTATUS[0m [90m2025-09-30 20:05:24[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/ksim-gym-example/train.py
+{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/train.py", "filename": "train.py", "lineno": 709}}
+ [1;32mSTATUS[0m [90m2025-09-30 20:05:24[0m [[1;34mxax.task.mixins.train[0m] humanoid_walking_task
+{"status": {"message": "humanoid_walking_task", "filename": "train.py", "lineno": 710}}
+ [1;32mSTATUS[0m [90m2025-09-30 20:05:24[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CpuDevice(id=0)]
+{"status": {"message": "JAX devices: [CpuDevice(id=0)]", "filename": "train.py", "lineno": 711}}
+  [1;36mINFO[0m  [90m2025-09-30 20:05:26[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+  [1;35mPING[0m  [90m2025-09-30 20:05:26[0m [[1;34mksim.task.rl[0m] Model size: 1,090,861 parameters
+{"ping": {"message": "Model size: 1,090,861 parameters", "filename": "rl.py", "lineno": 1962}}
+  [1;35mPING[0m  [90m2025-09-30 20:05:26[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,181,722 parameters
+{"ping": {"message": "Optimizer size: 2,181,722 parameters", "filename": "rl.py", "lineno": 1963}}
+  [1;36mINFO[0m  [90m2025-09-30 20:05:26[0m [[1;34mroot[0m] Using JAX default device: TFRT_CPU_0.
 Failed to import warp: No module named 'warp'
 Failed to import mujoco.mjx.third_party.mujoco_warp as mujoco_warp: No module named 'warp'
 Job finished
