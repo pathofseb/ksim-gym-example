@@ -22,30 +22,20 @@ echo "Node(s): $SLURM_JOB_NODELIST"
 # Create output directory if it doesn't exist
 mkdir -p slurm_outputs
 
-# Path to your conda env (change if needed)
-ENV_PATH="/cluster/work/$USER/ksim-gym-example/ksim-env/"
-
 module purge
-module load Anaconda3/2024.02-1
+module load Python/3.11.3-GCCcore-12.3.0
+module load CUDA/12.1.1
 
-# Create conda environment if it doesn't exist
-if [ ! -d "$ENV_PATH" ]; then
-  conda create -y --prefix ${ENV_PATH} python=3.11
-fi
-
-# Activate environment
-source activate ${ENV_PATH}
-
-# Install dependencies
-pip install -r requirements.txt
-# pip install 'jax[cuda13]'  # If using GPU machine, install JAX CUDA libraries
+# Install dependencies with compatible JAX version
+pip install --user -r requirements.txt
+pip install --user 'jax[cuda12]==0.4.20' 'jaxlib[cuda12]==0.4.20'
 
 echo "Installed dependencies:"
-pip freeze
+pip list --user
 
 # Verify GPU backend
-#echo "Checking JAX backend:"
-#python -c "import jax; print(jax.default_backend())"  # Should print "gpu"
+echo "Checking JAX backend:"
+python -c "import jax; print('JAX version:', jax.__version__); print('JAX backend:', jax.default_backend()); print('JAX devices:', jax.devices())"
 
 # Set MuJoCo to use headless rendering backend (osmesa)
 export MUJOCO_GL=osmesa
@@ -57,6 +47,6 @@ python -m train max_steps=100
 # Example: to load pretrained checkpoint and run in view mode, uncomment:
 # python -m train load_from_ckpt_path=assets/ckpt.bin run_mode=view
 
-conda deactivate
+# No conda to deactivate
 
 echo "Job finished"
