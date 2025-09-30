@@ -27,19 +27,13 @@ module load Python/3.11.3-GCCcore-12.3.0
 module load CUDA/12.1.1
 
 # Install dependencies with compatible JAX version (4 months old)
-pip install --user -r requirements.txt
-pip install --user --force-reinstall 'jax[cuda12]==0.4.28' 'jaxlib[cuda12]==0.4.28'
-
-echo "Installed dependencies:"
-pip list --user
+pip install -r requirements.txt
+pip install 'jax[cuda12]'
 
 # Verify GPU backend
-echo "Checking JAX backend:"
-python -c "import jax; print('JAX version:', jax.__version__); print('JAX backend:', jax.default_backend()); print('JAX devices:', jax.devices())"
 
 # Set MuJoCo to use headless rendering backend (osmesa)
 export MUJOCO_GL=osmesa
-echo "Set MUJOCO_GL=osmesa for headless rendering"
 
 # Run training
 python -m train max_steps=100
