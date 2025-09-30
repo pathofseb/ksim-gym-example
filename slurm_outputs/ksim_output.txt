@@ -1,0 +1,866 @@
+Running from directory: /cluster/work/sebasrb/ksim-gym-example
+Job name: ksim-zbot-train
+Job ID: 23099593
+Node(s): idun-01-03
+Collecting ksim==0.1.3 (from -r requirements.txt (line 4))
+  Using cached ksim-0.1.3-py3-none-any.whl
+Collecting xax==0.3.0 (from -r requirements.txt (line 5))
+  Using cached xax-0.3.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting mujoco-scenes (from -r requirements.txt (line 6))
+  Using cached mujoco_scenes-0.0.16-py3-none-any.whl.metadata (1.3 kB)
+Collecting jupyter (from -r requirements.txt (line 12))
+  Using cached jupyter-1.1.1-py2.py3-none-any.whl.metadata (2.0 kB)
+Requirement already satisfied: ipykernel in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 13)) (6.30.1)
+Requirement already satisfied: pre-commit in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 14)) (4.3.0)
+Requirement already satisfied: kinfer[jax] in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 9)) (0.5.6)
+Requirement already satisfied: numpy in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (1.26.4)
+Requirement already satisfied: matplotlib in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (3.10.6)
+Requirement already satisfied: tqdm in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (4.67.1)
+Requirement already satisfied: tabulate in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.9.0)
+Requirement already satisfied: kscale in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.3.18)
+Collecting distrax (from ksim==0.1.3->-r requirements.txt (line 4))
+  Using cached distrax-0.1.7-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: jax in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (0.7.1)
+Requirement already satisfied: mediapy in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (1.2.4)
+Collecting optax (from ksim==0.1.3->-r requirements.txt (line 4))
+  Using cached optax-0.2.6-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: scipy in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (1.16.2)
+Requirement already satisfied: mujoco in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (3.3.6)
+Collecting mujoco-mjx (from ksim==0.1.3->-r requirements.txt (line 4))
+  Using cached mujoco_mjx-3.3.6-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: bvhio in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: pyglm in ./ksim-env/lib/python3.11/site-packages (from ksim==0.1.3->-r requirements.txt (line 4)) (2.8.2)
+Requirement already satisfied: attrs in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (25.3.0)
+Collecting chex (from xax==0.3.0->-r requirements.txt (line 5))
+  Using cached chex-0.1.91-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: dpshdl in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (0.0.21)
+Collecting equinox (from xax==0.3.0->-r requirements.txt (line 5))
+  Using cached equinox-0.13.1-py3-none-any.whl.metadata (19 kB)
+Requirement already satisfied: importlib-resources in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (6.5.2)
+Requirement already satisfied: jaxtyping in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (0.3.2)
+Collecting orbax-checkpoint (from xax==0.3.0->-r requirements.txt (line 5))
+  Using cached orbax_checkpoint-0.11.25-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: pillow in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (11.3.0)
+Requirement already satisfied: omegaconf in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (2.3.0)
+Requirement already satisfied: gitpython in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (3.1.45)
+Requirement already satisfied: tensorboard in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (2.19.0)
+Requirement already satisfied: psutil in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (7.1.0)
+Requirement already satisfied: requests in ./ksim-env/lib/python3.11/site-packages (from xax==0.3.0->-r requirements.txt (line 5)) (2.32.5)
+Requirement already satisfied: etils in ./ksim-env/lib/python3.11/site-packages (from mujoco-scenes->-r requirements.txt (line 6)) (1.13.0)
+Requirement already satisfied: onnx in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 9)) (1.17.0)
+Requirement already satisfied: onnxruntime==1.20.0 in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 9)) (1.20.0)
+Requirement already satisfied: tensorflow in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 9)) (2.19.1)
+Requirement already satisfied: tf2onnx>=1.16.0 in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 9)) (1.16.1)
+Requirement already satisfied: coloredlogs in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (15.0.1)
+Requirement already satisfied: flatbuffers in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (25.9.23)
+Requirement already satisfied: packaging in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (25.0)
+Requirement already satisfied: protobuf in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (3.20.3)
+Requirement already satisfied: sympy in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (1.14.0)
+Collecting notebook (from jupyter->-r requirements.txt (line 12))
+  Using cached notebook-7.4.7-py3-none-any.whl.metadata (10 kB)
+Collecting jupyter-console (from jupyter->-r requirements.txt (line 12))
+  Using cached jupyter_console-6.6.3-py3-none-any.whl.metadata (5.8 kB)
+Collecting nbconvert (from jupyter->-r requirements.txt (line 12))
+  Using cached nbconvert-7.16.6-py3-none-any.whl.metadata (8.5 kB)
+Requirement already satisfied: ipywidgets in ./ksim-env/lib/python3.11/site-packages (from jupyter->-r requirements.txt (line 12)) (8.1.7)
+Collecting jupyterlab (from jupyter->-r requirements.txt (line 12))
+  Using cached jupyterlab-4.4.9-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: comm>=0.1.1 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (0.2.3)
+Requirement already satisfied: debugpy>=1.6.5 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (1.8.17)
+Requirement already satisfied: ipython>=7.23.1 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (9.6.0)
+Requirement already satisfied: jupyter-client>=8.0.0 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (8.6.3)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (5.8.1)
+Requirement already satisfied: matplotlib-inline>=0.1 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (0.1.7)
+Requirement already satisfied: nest-asyncio>=1.4 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (1.6.0)
+Requirement already satisfied: pyzmq>=25 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (27.1.0)
+Requirement already satisfied: tornado>=6.2 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in ./ksim-env/lib/python3.11/site-packages (from ipykernel->-r requirements.txt (line 13)) (5.14.3)
+Requirement already satisfied: cfgv>=2.0.0 in ./ksim-env/lib/python3.11/site-packages (from pre-commit->-r requirements.txt (line 14)) (3.4.0)
+Requirement already satisfied: identify>=1.0.0 in ./ksim-env/lib/python3.11/site-packages (from pre-commit->-r requirements.txt (line 14)) (2.6.14)
+Requirement already satisfied: nodeenv>=0.11.1 in ./ksim-env/lib/python3.11/site-packages (from pre-commit->-r requirements.txt (line 14)) (1.9.1)
+Requirement already satisfied: pyyaml>=5.1 in ./ksim-env/lib/python3.11/site-packages (from pre-commit->-r requirements.txt (line 14)) (6.0.3)
+Requirement already satisfied: virtualenv>=20.10.0 in ./ksim-env/lib/python3.11/site-packages (from pre-commit->-r requirements.txt (line 14)) (20.34.0)
+Requirement already satisfied: decorator in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (1.1.1)
+Requirement already satisfied: jedi>=0.16 in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (0.19.2)
+Requirement already satisfied: pexpect>4.3 in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (3.0.52)
+Requirement already satisfied: pygments>=2.4.0 in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (2.19.2)
+Requirement already satisfied: stack_data in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in ./ksim-env/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (4.15.0)
+Requirement already satisfied: wcwidth in ./ksim-env/lib/python3.11/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./ksim-env/lib/python3.11/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (0.8.5)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./ksim-env/lib/python3.11/site-packages (from jupyter-client>=8.0.0->ipykernel->-r requirements.txt (line 13)) (2.9.0.post0)
+Requirement already satisfied: platformdirs>=2.5 in ./ksim-env/lib/python3.11/site-packages (from jupyter-core!=5.0.*,>=4.12->ipykernel->-r requirements.txt (line 13)) (4.4.0)
+Requirement already satisfied: ptyprocess>=0.5 in ./ksim-env/lib/python3.11/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (0.7.0)
+Requirement already satisfied: six>=1.5 in ./ksim-env/lib/python3.11/site-packages (from python-dateutil>=2.8.2->jupyter-client>=8.0.0->ipykernel->-r requirements.txt (line 13)) (1.17.0)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./ksim-env/lib/python3.11/site-packages (from virtualenv>=20.10.0->pre-commit->-r requirements.txt (line 14)) (0.4.0)
+Requirement already satisfied: filelock<4,>=3.12.2 in ./ksim-env/lib/python3.11/site-packages (from virtualenv>=20.10.0->pre-commit->-r requirements.txt (line 14)) (3.19.1)
+Requirement already satisfied: spatial-transform==1.3.1 in ./ksim-env/lib/python3.11/site-packages (from bvhio->ksim==0.1.3->-r requirements.txt (line 4)) (1.3.1)
+Requirement already satisfied: absl-py>=2.3.1 in ./ksim-env/lib/python3.11/site-packages (from chex->xax==0.3.0->-r requirements.txt (line 5)) (2.3.1)
+Requirement already satisfied: jaxlib>=0.7.0 in ./ksim-env/lib/python3.11/site-packages (from chex->xax==0.3.0->-r requirements.txt (line 5)) (0.7.1)
+Requirement already satisfied: toolz>=1.0.0 in ./ksim-env/lib/python3.11/site-packages (from chex->xax==0.3.0->-r requirements.txt (line 5)) (1.0.0)
+Requirement already satisfied: ml_dtypes>=0.5.0 in ./ksim-env/lib/python3.11/site-packages (from jax->ksim==0.1.3->-r requirements.txt (line 4)) (0.5.3)
+Requirement already satisfied: opt_einsum in ./ksim-env/lib/python3.11/site-packages (from jax->ksim==0.1.3->-r requirements.txt (line 4)) (3.4.0)
+Requirement already satisfied: humanfriendly>=9.1 in ./ksim-env/lib/python3.11/site-packages (from coloredlogs->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (10.0)
+Requirement already satisfied: tfp-nightly in ./ksim-env/lib/python3.11/site-packages (from distrax->ksim==0.1.3->-r requirements.txt (line 4)) (0.26.0.dev20250930)
+Collecting jax (from ksim==0.1.3->-r requirements.txt (line 4))
+  Using cached jax-0.7.2-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: wadler-lindig>=0.1.0 in ./ksim-env/lib/python3.11/site-packages (from equinox->xax==0.3.0->-r requirements.txt (line 5)) (0.1.7)
+Collecting jaxlib>=0.7.0 (from chex->xax==0.3.0->-r requirements.txt (line 5))
+  Using cached jaxlib-0.7.2-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (1.3 kB)
+INFO: pip is looking at multiple versions of jax to determine which version is compatible with other requirements. This could take a while.
+Collecting equinox (from xax==0.3.0->-r requirements.txt (line 5))
+  Using cached equinox-0.13.0-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: gitdb<5,>=4.0.1 in ./ksim-env/lib/python3.11/site-packages (from gitpython->xax==0.3.0->-r requirements.txt (line 5)) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in ./ksim-env/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython->xax==0.3.0->-r requirements.txt (line 5)) (5.0.2)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in ./ksim-env/lib/python3.11/site-packages (from ipywidgets->jupyter->-r requirements.txt (line 12)) (4.0.14)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in ./ksim-env/lib/python3.11/site-packages (from ipywidgets->jupyter->-r requirements.txt (line 12)) (3.0.15)
+Requirement already satisfied: async-lru>=1.0.0 in ./ksim-env/lib/python3.11/site-packages (from jupyterlab->jupyter->-r requirements.txt (line 12)) (2.0.5)
+Requirement already satisfied: httpx<1,>=0.25.0 in ./ksim-env/lib/python3.11/site-packages (from jupyterlab->jupyter->-r requirements.txt (line 12)) (0.28.1)
+Requirement already satisfied: jinja2>=3.0.3 in ./ksim-env/lib/python3.11/site-packages (from jupyterlab->jupyter->-r requirements.txt (line 12)) (3.1.6)
+Collecting jupyter-lsp>=2.0.0 (from jupyterlab->jupyter->-r requirements.txt (line 12))
+  Using cached jupyter_lsp-2.3.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting jupyter-server<3,>=2.4.0 (from jupyterlab->jupyter->-r requirements.txt (line 12))
+  Using cached jupyter_server-2.17.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting jupyterlab-server<3,>=2.27.1 (from jupyterlab->jupyter->-r requirements.txt (line 12))
+  Using cached jupyterlab_server-2.27.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting notebook-shim>=0.2 (from jupyterlab->jupyter->-r requirements.txt (line 12))
+  Using cached notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: setuptools>=41.1.0 in ./ksim-env/lib/python3.11/site-packages (from jupyterlab->jupyter->-r requirements.txt (line 12)) (78.1.1)
+Requirement already satisfied: anyio in ./ksim-env/lib/python3.11/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (4.11.0)
+Requirement already satisfied: certifi in ./ksim-env/lib/python3.11/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (2025.8.3)
+Requirement already satisfied: httpcore==1.* in ./ksim-env/lib/python3.11/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.0.9)
+Requirement already satisfied: idna in ./ksim-env/lib/python3.11/site-packages (from httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (3.10)
+Requirement already satisfied: h11>=0.16 in ./ksim-env/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.16.0)
+Requirement already satisfied: argon2-cffi>=21.1 in ./ksim-env/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (25.1.0)
+Collecting jupyter-events>=0.11.0 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12))
+  Using cached jupyter_events-0.12.0-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: jupyter-server-terminals>=0.4.4 in ./ksim-env/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.5.3)
+Collecting nbformat>=5.3.0 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12))
+  Using cached nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: overrides>=5.0 in ./ksim-env/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (7.7.0)
+Requirement already satisfied: prometheus-client>=0.9 in ./ksim-env/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.23.1)
+Requirement already satisfied: send2trash>=1.8.2 in ./ksim-env/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.8.3)
+Requirement already satisfied: terminado>=0.8.3 in ./ksim-env/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.18.1)
+Requirement already satisfied: websocket-client>=1.7 in ./ksim-env/lib/python3.11/site-packages (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.8.0)
+Requirement already satisfied: babel>=2.10 in ./ksim-env/lib/python3.11/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter->-r requirements.txt (line 12)) (2.17.0)
+Requirement already satisfied: json5>=0.9.0 in ./ksim-env/lib/python3.11/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.12.1)
+Requirement already satisfied: jsonschema>=4.18.0 in ./ksim-env/lib/python3.11/site-packages (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter->-r requirements.txt (line 12)) (4.25.1)
+Requirement already satisfied: sniffio>=1.1 in ./ksim-env/lib/python3.11/site-packages (from anyio->httpx<1,>=0.25.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.3.1)
+Requirement already satisfied: argon2-cffi-bindings in ./ksim-env/lib/python3.11/site-packages (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (25.1.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./ksim-env/lib/python3.11/site-packages (from jinja2>=3.0.3->jupyterlab->jupyter->-r requirements.txt (line 12)) (3.0.3)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./ksim-env/lib/python3.11/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter->-r requirements.txt (line 12)) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in ./ksim-env/lib/python3.11/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.36.2)
+Requirement already satisfied: rpds-py>=0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.27.1)
+Requirement already satisfied: python-json-logger>=2.0.4 in ./ksim-env/lib/python3.11/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (3.3.0)
+Requirement already satisfied: rfc3339-validator in ./ksim-env/lib/python3.11/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.1.4)
+Requirement already satisfied: rfc3986-validator>=0.1.1 in ./ksim-env/lib/python3.11/site-packages (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (0.1.1)
+Requirement already satisfied: fqdn in ./ksim-env/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.5.1)
+Requirement already satisfied: isoduration in ./ksim-env/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (20.11.0)
+Requirement already satisfied: jsonpointer>1.13 in ./ksim-env/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (3.0.0)
+Requirement already satisfied: rfc3987-syntax>=1.1.0 in ./ksim-env/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.1.0)
+Requirement already satisfied: uri-template in ./ksim-env/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.3.0)
+Requirement already satisfied: webcolors>=24.6.0 in ./ksim-env/lib/python3.11/site-packages (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (24.11.1)
+Requirement already satisfied: beautifulsoup4 in ./ksim-env/lib/python3.11/site-packages (from nbconvert->jupyter->-r requirements.txt (line 12)) (4.14.2)
+Requirement already satisfied: bleach!=5.0.0 in ./ksim-env/lib/python3.11/site-packages (from bleach[css]!=5.0.0->nbconvert->jupyter->-r requirements.txt (line 12)) (6.2.0)
+Requirement already satisfied: defusedxml in ./ksim-env/lib/python3.11/site-packages (from nbconvert->jupyter->-r requirements.txt (line 12)) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in ./ksim-env/lib/python3.11/site-packages (from nbconvert->jupyter->-r requirements.txt (line 12)) (0.3.0)
+Requirement already satisfied: mistune<4,>=2.0.3 in ./ksim-env/lib/python3.11/site-packages (from nbconvert->jupyter->-r requirements.txt (line 12)) (3.1.4)
+Collecting nbclient>=0.5.0 (from nbconvert->jupyter->-r requirements.txt (line 12))
+  Using cached nbclient-0.10.2-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: pandocfilters>=1.4.1 in ./ksim-env/lib/python3.11/site-packages (from nbconvert->jupyter->-r requirements.txt (line 12)) (1.5.1)
+Requirement already satisfied: webencodings in ./ksim-env/lib/python3.11/site-packages (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert->jupyter->-r requirements.txt (line 12)) (0.5.1)
+Requirement already satisfied: tinycss2<1.5,>=1.1.0 in ./ksim-env/lib/python3.11/site-packages (from bleach[css]!=5.0.0->nbconvert->jupyter->-r requirements.txt (line 12)) (1.4.0)
+Requirement already satisfied: fastjsonschema>=2.15 in ./ksim-env/lib/python3.11/site-packages (from nbformat>=5.3.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (2.21.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./ksim-env/lib/python3.11/site-packages (from requests->xax==0.3.0->-r requirements.txt (line 5)) (3.4.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./ksim-env/lib/python3.11/site-packages (from requests->xax==0.3.0->-r requirements.txt (line 5)) (2.5.0)
+Requirement already satisfied: lark>=1.2.2 in ./ksim-env/lib/python3.11/site-packages (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.3.0)
+Requirement already satisfied: cffi>=1.0.1 in ./ksim-env/lib/python3.11/site-packages (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (2.0.0)
+Requirement already satisfied: pycparser in ./ksim-env/lib/python3.11/site-packages (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (2.23)
+Requirement already satisfied: soupsieve>1.2 in ./ksim-env/lib/python3.11/site-packages (from beautifulsoup4->nbconvert->jupyter->-r requirements.txt (line 12)) (2.8)
+Requirement already satisfied: arrow>=0.15.0 in ./ksim-env/lib/python3.11/site-packages (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (1.3.0)
+Requirement already satisfied: types-python-dateutil>=2.8.10 in ./ksim-env/lib/python3.11/site-packages (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter->-r requirements.txt (line 12)) (2.9.0.20250822)
+Requirement already satisfied: email_validator in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (2.3.0)
+Requirement already satisfied: aiohttp in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (3.12.15)
+Requirement already satisfied: cryptography in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (46.0.1)
+Requirement already satisfied: pydantic in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (2.11.9)
+Requirement already satisfied: pyjwt in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (2.10.1)
+Requirement already satisfied: yarl in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (1.20.1)
+Requirement already satisfied: aiofiles in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (24.1.0)
+Requirement already satisfied: click in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (8.3.0)
+Requirement already satisfied: colorlogging in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim==0.1.3->-r requirements.txt (line 4)) (0.0.2)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (2.6.1)
+Requirement already satisfied: aiosignal>=1.4.0 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (1.4.0)
+Requirement already satisfied: frozenlist>=1.1.1 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (1.7.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (6.6.4)
+Requirement already satisfied: propcache>=0.2.0 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (0.3.2)
+Requirement already satisfied: dnspython>=2.0.0 in ./ksim-env/lib/python3.11/site-packages (from email_validator->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (2.8.0)
+Requirement already satisfied: contourpy>=1.0.1 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim==0.1.3->-r requirements.txt (line 4)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim==0.1.3->-r requirements.txt (line 4)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim==0.1.3->-r requirements.txt (line 4)) (4.60.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim==0.1.3->-r requirements.txt (line 4)) (1.4.9)
+Requirement already satisfied: pyparsing>=2.3.1 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim==0.1.3->-r requirements.txt (line 4)) (3.2.5)
+Requirement already satisfied: glfw in ./ksim-env/lib/python3.11/site-packages (from mujoco->ksim==0.1.3->-r requirements.txt (line 4)) (2.10.0)
+Requirement already satisfied: pyopengl in ./ksim-env/lib/python3.11/site-packages (from mujoco->ksim==0.1.3->-r requirements.txt (line 4)) (3.1.10)
+Requirement already satisfied: fsspec in ./ksim-env/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim==0.1.3->-r requirements.txt (line 4)) (2025.9.0)
+Requirement already satisfied: zipp in ./ksim-env/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim==0.1.3->-r requirements.txt (line 4)) (3.23.0)
+Requirement already satisfied: trimesh in ./ksim-env/lib/python3.11/site-packages (from mujoco-mjx->ksim==0.1.3->-r requirements.txt (line 4)) (4.8.3)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in ./ksim-env/lib/python3.11/site-packages (from omegaconf->xax==0.3.0->-r requirements.txt (line 5)) (4.9.3)
+Requirement already satisfied: msgpack in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.0->-r requirements.txt (line 5)) (1.1.1)
+Requirement already satisfied: tensorstore>=0.1.71 in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.0->-r requirements.txt (line 5)) (0.1.77)
+Requirement already satisfied: humanize in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.0->-r requirements.txt (line 5)) (4.13.0)
+Requirement already satisfied: simplejson>=3.16.0 in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax==0.3.0->-r requirements.txt (line 5)) (3.20.2)
+Requirement already satisfied: annotated-types>=0.6.0 in ./ksim-env/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.2 in ./ksim-env/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (2.33.2)
+Requirement already satisfied: typing-inspection>=0.4.0 in ./ksim-env/lib/python3.11/site-packages (from pydantic->kscale->ksim==0.1.3->-r requirements.txt (line 4)) (0.4.1)
+Requirement already satisfied: executing>=1.2.0 in ./ksim-env/lib/python3.11/site-packages (from stack_data->ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./ksim-env/lib/python3.11/site-packages (from stack_data->ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (3.0.0)
+Requirement already satisfied: pure-eval in ./ksim-env/lib/python3.11/site-packages (from stack_data->ipython>=7.23.1->ipykernel->-r requirements.txt (line 13)) (0.2.3)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./ksim-env/lib/python3.11/site-packages (from sympy->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 9)) (1.3.0)
+Requirement already satisfied: grpcio>=1.48.2 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax==0.3.0->-r requirements.txt (line 5)) (1.75.1)
+Requirement already satisfied: markdown>=2.6.8 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax==0.3.0->-r requirements.txt (line 5)) (3.9)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax==0.3.0->-r requirements.txt (line 5)) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax==0.3.0->-r requirements.txt (line 5)) (3.1.3)
+Requirement already satisfied: astunparse>=1.6.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (1.6.3)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (0.6.0)
+Requirement already satisfied: google-pasta>=0.1.1 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (18.1.1)
+Requirement already satisfied: termcolor>=1.1.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (3.1.0)
+Requirement already satisfied: wrapt>=1.11.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (1.17.3)
+Requirement already satisfied: keras>=3.5.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (3.11.3)
+Requirement already satisfied: h5py>=3.11.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (3.14.0)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (0.37.1)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in ./ksim-env/lib/python3.11/site-packages (from astunparse>=1.6.0->tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (0.45.1)
+Requirement already satisfied: rich in ./ksim-env/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (14.1.0)
+Requirement already satisfied: namex in ./ksim-env/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (0.1.0)
+Requirement already satisfied: optree in ./ksim-env/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (0.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./ksim-env/lib/python3.11/site-packages (from rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./ksim-env/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 9)) (0.1.2)
+Requirement already satisfied: cloudpickle>=1.3 in ./ksim-env/lib/python3.11/site-packages (from tfp-nightly->distrax->ksim==0.1.3->-r requirements.txt (line 4)) (3.1.1)
+Requirement already satisfied: dm-tree in ./ksim-env/lib/python3.11/site-packages (from tfp-nightly->distrax->ksim==0.1.3->-r requirements.txt (line 4)) (0.1.9)
+Using cached xax-0.3.0-py3-none-any.whl (107 kB)
+Using cached mujoco_scenes-0.0.16-py3-none-any.whl (6.6 MB)
+Using cached jupyter-1.1.1-py2.py3-none-any.whl (2.7 kB)
+Using cached chex-0.1.91-py3-none-any.whl (100 kB)
+Using cached distrax-0.1.7-py3-none-any.whl (312 kB)
+Using cached equinox-0.13.0-py3-none-any.whl (177 kB)
+Using cached jupyter_console-6.6.3-py3-none-any.whl (24 kB)
+Using cached jupyterlab-4.4.9-py3-none-any.whl (12.3 MB)
+Using cached jupyter_server-2.17.0-py3-none-any.whl (388 kB)
+Using cached jupyterlab_server-2.27.3-py3-none-any.whl (59 kB)
+Using cached jupyter_events-0.12.0-py3-none-any.whl (19 kB)
+Using cached jupyter_lsp-2.3.0-py3-none-any.whl (76 kB)
+Using cached nbconvert-7.16.6-py3-none-any.whl (258 kB)
+Using cached nbclient-0.10.2-py3-none-any.whl (25 kB)
+Using cached nbformat-5.10.4-py3-none-any.whl (78 kB)
+Using cached notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+Using cached mujoco_mjx-3.3.6-py3-none-any.whl (7.0 MB)
+Using cached notebook-7.4.7-py3-none-any.whl (14.3 MB)
+Using cached optax-0.2.6-py3-none-any.whl (367 kB)
+Using cached orbax_checkpoint-0.11.25-py3-none-any.whl (563 kB)
+Installing collected packages: orbax-checkpoint, nbformat, mujoco-scenes, mujoco-mjx, jupyter-console, equinox, chex, optax, nbclient, jupyter-events, distrax, xax, nbconvert, ksim, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook, jupyter
+
+Successfully installed chex-0.1.91 distrax-0.1.7 equinox-0.13.0 jupyter-1.1.1 jupyter-console-6.6.3 jupyter-events-0.12.0 jupyter-lsp-2.3.0 jupyter-server-2.17.0 jupyterlab-4.4.9 jupyterlab-server-2.27.3 ksim-0.1.3 mujoco-mjx-3.3.6 mujoco-scenes-0.0.16 nbclient-0.10.2 nbconvert-7.16.6 nbformat-5.10.4 notebook-7.4.7 notebook-shim-0.2.4 optax-0.2.6 orbax-checkpoint-0.11.25 xax-0.3.0
+Requirement already satisfied: jax[cuda12] in ./ksim-env/lib/python3.11/site-packages (0.7.1)
+Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
+Requirement already satisfied: ml_dtypes>=0.5.0 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
+Requirement already satisfied: numpy>=1.26 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.26.4)
+Requirement already satisfied: opt_einsum in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (3.4.0)
+Requirement already satisfied: scipy>=1.12 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.16.2)
+Collecting jax-cuda12-plugin<=0.7.1,>=0.7.1 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached jax_cuda12_plugin-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (2.0 kB)
+Collecting jax-cuda12-pjrt==0.7.1 (from jax-cuda12-plugin<=0.7.1,>=0.7.1->jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached jax_cuda12_pjrt-0.7.1-py3-none-manylinux_2_27_x86_64.whl.metadata (579 bytes)
+Collecting nvidia-cublas-cu12>=12.1.3.1 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti-cu12>=12.1.105 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_cupti_cu12-12.9.79-py3-none-manylinux_2_25_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cuda-nvcc-cu12>=12.6.85 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_nvcc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime-cu12>=12.1.105 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cudnn-cu12<10.0,>=9.8 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cudnn_cu12-9.13.1.26-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cufft-cu12>=11.0.2.54 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cufft_cu12-11.4.1.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusolver-cu12>=11.4.5.107 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
+Collecting nvidia-cusparse-cu12>=12.1.0.106 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nccl-cu12>=2.18.1 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_nccl_cu12-2.28.3-py3-none-manylinux_2_18_x86_64.whl.metadata (2.0 kB)
+Collecting nvidia-nvjitlink-cu12>=12.1.105 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-nvrtc-cu12>=12.1.55 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvshmem-cu12>=3.2.5 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Using cached jax_cuda12_plugin-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl (5.1 MB)
+Using cached jax_cuda12_pjrt-0.7.1-py3-none-manylinux_2_27_x86_64.whl (123.1 MB)
+Using cached nvidia_cudnn_cu12-9.13.1.26-py3-none-manylinux_2_27_x86_64.whl (644.3 MB)
+Using cached nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl (581.2 MB)
+Using cached nvidia_cuda_cupti_cu12-12.9.79-py3-none-manylinux_2_25_x86_64.whl (10.8 MB)
+Using cached nvidia_cuda_nvcc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.5 MB)
+Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (89.6 MB)
+Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.5 MB)
+Using cached nvidia_cufft_cu12-11.4.1.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (200.9 MB)
+Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl (338.1 MB)
+Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (366.5 MB)
+Using cached nvidia_nccl_cu12-2.28.3-py3-none-manylinux_2_18_x86_64.whl (295.9 MB)
+Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.7 MB)
+Using cached nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (139.1 MB)
+
+Successfully installed MarkupSafe-3.0.3 absl-py-2.3.1 aiofiles-24.1.0 aiohappyeyeballs-2.6.1 aiohttp-3.12.15 aiosignal-1.4.0 annotated-types-0.7.0 antlr4-python3-runtime-4.9.3 anyio-4.11.0 argon2-cffi-25.1.0 argon2-cffi-bindings-25.1.0 arrow-1.3.0 asttokens-3.0.0 astunparse-1.6.3 async-lru-2.0.5 attrs-25.3.0 babel-2.17.0 beautifulsoup4-4.14.2 bleach-6.2.0 bvhio-1.5.3 certifi-2025.8.3 cffi-2.0.0 cfgv-3.4.0 charset_normalizer-3.4.3 chex-0.1.91 click-8.3.0 cloudpickle-3.1.1 coloredlogs-15.0.1 colorlogging-0.0.2 comm-0.2.3 contourpy-1.3.3 cryptography-46.0.1 cycler-0.12.1 debugpy-1.8.17 decorator-5.2.1 defusedxml-0.7.1 distlib-0.4.0 distrax-0.1.7 dm-tree-0.1.9 dnspython-2.8.0 dpshdl-0.0.21 email_validator-2.3.0 equinox-0.13.0 etils-1.13.0 executing-2.2.1 fastjsonschema-2.21.2 filelock-3.19.1 flatbuffers-25.9.23 fonttools-4.60.1 fqdn-1.5.1 frozenlist-1.7.0 fsspec-2025.9.0 gast-0.6.0 gitdb-4.0.12 gitpython-3.1.45 glfw-2.10.0 google_pasta-0.2.0 grpcio-1.75.1 h11-0.16.0 h5py-3.14.0 httpcore-1.0.9 httpx-0.28.1 humanfriendly-10.0 humanize-4.13.0 identify-2.6.14 idna-3.10 importlib-resources-6.5.2 ipykernel-6.30.1 ipython-9.6.0 ipython-pygments-lexers-1.1.1 ipywidgets-8.1.7 isoduration-20.11.0 jax-0.7.1 jaxlib-0.7.1 jaxtyping-0.3.2 jedi-0.19.2 jinja2-3.1.6 json5-0.12.1 jsonpointer-3.0.0 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 jupyter-1.1.1 jupyter-client-8.6.3 jupyter-console-6.6.3 jupyter-core-5.8.1 jupyter-events-0.12.0 jupyter-lsp-2.3.0 jupyter-server-2.17.0 jupyter-server-terminals-0.5.3 jupyterlab-4.4.9 jupyterlab-pygments-0.3.0 jupyterlab-server-2.27.3 jupyterlab_widgets-3.0.15 keras-3.11.3 kinfer-0.5.6 kiwisolver-1.4.9 kscale-0.3.18 ksim-0.1.3 lark-1.3.0 libclang-18.1.1 markdown-3.9 markdown-it-py-4.0.0 matplotlib-3.10.6 matplotlib-inline-0.1.7 mdurl-0.1.2 mediapy-1.2.4 mistune-3.1.4 ml_dtypes-0.5.3 mpmath-1.3.0 msgpack-1.1.1 mujoco-3.3.6 mujoco-mjx-3.3.6 mujoco-scenes-0.0.16 multidict-6.6.4 namex-0.1.0 nbclient-0.10.2 nbconvert-7.16.6 nbformat-5.10.4 nest-asyncio-1.6.0 nodeenv-1.9.1 notebook-7.4.7 notebook-shim-0.2.4 numpy-1.26.4 omegaconf-2.3.0 onnx-1.17.0 onnxruntime-1.20.0 opt_einsum-3.4.0 optax-0.2.6 optree-0.17.0 orbax-checkpoint-0.11.25 overrides-7.7.0 packaging-25.0 pandocfilters-1.5.1 parso-0.8.5 pexpect-4.9.0 pillow-11.3.0 platformdirs-4.4.0 pre-commit-4.3.0 prometheus-client-0.23.1 prompt_toolkit-3.0.52 propcache-0.3.2 protobuf-3.20.3 psutil-7.1.0 ptyprocess-0.7.0 pure-eval-0.2.3 pycparser-2.23 pydantic-2.11.9 pydantic-core-2.33.2 pyglm-2.8.2 pygments-2.19.2 pyjwt-2.10.1 pyopengl-3.1.10 pyparsing-3.2.5 python-dateutil-2.9.0.post0 python-json-logger-3.3.0 pyyaml-6.0.3 pyzmq-27.1.0 referencing-0.36.2 requests-2.32.5 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rfc3987-syntax-1.1.0 rich-14.1.0 rpds-py-0.27.1 scipy-1.16.2 send2trash-1.8.3 simplejson-3.20.2 six-1.17.0 smmap-5.0.2 sniffio-1.3.1 soupsieve-2.8 spatial-transform-1.3.1 stack_data-0.6.3 sympy-1.14.0 tabulate-0.9.0 tensorboard-2.19.0 tensorboard-data-server-0.7.2 tensorflow-2.19.1 tensorflow-io-gcs-filesystem-0.37.1 tensorstore-0.1.77 termcolor-3.1.0 terminado-0.18.1 tf2onnx-1.16.1 tfp-nightly-0.26.0.dev20250930 tinycss2-1.4.0 toolz-1.0.0 tornado-6.5.2 tqdm-4.67.1 traitlets-5.14.3 trimesh-4.8.3 types-python-dateutil-2.9.0.20250822 typing-inspection-0.4.1 typing_extensions-4.15.0 uri-template-1.3.0 urllib3-2.5.0 virtualenv-20.34.0 wadler-lindig-0.1.7 wcwidth-0.2.14 webcolors-24.11.1 webencodings-0.5.1 websocket-client-1.8.0 werkzeug-3.1.3 widgetsnbextension-4.0.14 wrapt-1.17.3 xax-0.3.0 yarl-1.20.1 zipp-3.23.0
+Installing collected packages: jax-cuda12-pjrt, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-nvcc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, jax-cuda12-plugin, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, nvidia-cusolver-cu12
+Requirement already satisfied: jax[cuda12] in ./ksim-env/lib/python3.11/site-packages (0.7.1)
+Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
+Requirement already satisfied: ml_dtypes>=0.5.0 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
+Requirement already satisfied: numpy>=1.26 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.26.4)
+Requirement already satisfied: opt_einsum in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (3.4.0)
+Requirement already satisfied: scipy>=1.12 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.16.2)
+Collecting jax-cuda12-plugin<=0.7.1,>=0.7.1 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached jax_cuda12_plugin-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl.metadata (2.0 kB)
+Collecting jax-cuda12-pjrt==0.7.1 (from jax-cuda12-plugin<=0.7.1,>=0.7.1->jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached jax_cuda12_pjrt-0.7.1-py3-none-manylinux_2_27_x86_64.whl.metadata (579 bytes)
+Collecting nvidia-cublas-cu12>=12.1.3.1 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti-cu12>=12.1.105 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_cupti_cu12-12.9.79-py3-none-manylinux_2_25_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cuda-nvcc-cu12>=12.6.85 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_nvcc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime-cu12>=12.1.105 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cudnn-cu12<10.0,>=9.8 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cudnn_cu12-9.13.1.26-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cufft-cu12>=11.0.2.54 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cufft_cu12-11.4.1.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusolver-cu12>=11.4.5.107 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
+Collecting nvidia-cusparse-cu12>=12.1.0.106 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nccl-cu12>=2.18.1 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_nccl_cu12-2.28.3-py3-none-manylinux_2_18_x86_64.whl.metadata (2.0 kB)
+Collecting nvidia-nvjitlink-cu12>=12.1.105 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-nvrtc-cu12>=12.1.55 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvshmem-cu12>=3.2.5 (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12])
+  Using cached nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Using cached jax_cuda12_plugin-0.7.1-cp311-cp311-manylinux_2_27_x86_64.whl (5.1 MB)
+Using cached jax_cuda12_pjrt-0.7.1-py3-none-manylinux_2_27_x86_64.whl (123.1 MB)
+Using cached nvidia_cudnn_cu12-9.13.1.26-py3-none-manylinux_2_27_x86_64.whl (644.3 MB)
+Using cached nvidia_cublas_cu12-12.9.1.4-py3-none-manylinux_2_27_x86_64.whl (581.2 MB)
+Using cached nvidia_cuda_cupti_cu12-12.9.79-py3-none-manylinux_2_25_x86_64.whl (10.8 MB)
+Using cached nvidia_cuda_nvcc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.5 MB)
+Using cached nvidia_cuda_nvrtc_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (89.6 MB)
+Using cached nvidia_cuda_runtime_cu12-12.9.79-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.5 MB)
+Using cached nvidia_cufft_cu12-11.4.1.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (200.9 MB)
+Using cached nvidia_cusolver_cu12-11.7.5.82-py3-none-manylinux_2_27_x86_64.whl (338.1 MB)
+Using cached nvidia_cusparse_cu12-12.5.10.65-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (366.5 MB)
+Using cached nvidia_nccl_cu12-2.28.3-py3-none-manylinux_2_18_x86_64.whl (295.9 MB)
+Using cached nvidia_nvjitlink_cu12-12.9.86-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.7 MB)
+Using cached nvidia_nvshmem_cu12-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (139.1 MB)
+Installing collected packages: jax-cuda12-pjrt, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-nvcc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, jax-cuda12-plugin, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, nvidia-cusolver-cu12
+
+Successfully installed jax-cuda12-pjrt-0.7.1 jax-cuda12-plugin-0.7.1 nvidia-cublas-cu12-12.9.1.4 nvidia-cuda-cupti-cu12-12.9.79 nvidia-cuda-nvcc-cu12-12.9.86 nvidia-cuda-nvrtc-cu12-12.9.86 nvidia-cuda-runtime-cu12-12.9.79 nvidia-cudnn-cu12-9.13.1.26 nvidia-cufft-cu12-11.4.1.4 nvidia-cusolver-cu12-11.7.5.82 nvidia-cusparse-cu12-12.5.10.65 nvidia-nccl-cu12-2.28.3 nvidia-nvjitlink-cu12-12.9.86 nvidia-nvshmem-cu12-3.4.5
+Installed dependencies:
+absl-py==2.3.1
+aiofiles==24.1.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.12.15
+aiosignal==1.4.0
+annotated-types==0.7.0
+antlr4-python3-runtime==4.9.3
+anyio==4.11.0
+argon2-cffi==25.1.0
+argon2-cffi-bindings==25.1.0
+arrow==1.3.0
+asttokens==3.0.0
+astunparse==1.6.3
+async-lru==2.0.5
+attrs==25.3.0
+babel==2.17.0
+beautifulsoup4==4.14.2
+bleach==6.2.0
+bvhio==1.5.3
+certifi==2025.8.3
+cffi==2.0.0
+cfgv==3.4.0
+charset-normalizer==3.4.3
+chex==0.1.91
+click==8.3.0
+cloudpickle==3.1.1
+coloredlogs==15.0.1
+colorlogging==0.0.2
+comm==0.2.3
+contourpy==1.3.3
+cryptography==46.0.1
+cycler==0.12.1
+debugpy==1.8.17
+decorator==5.2.1
+defusedxml==0.7.1
+distlib==0.4.0
+distrax==0.1.7
+dm-tree==0.1.9
+dnspython==2.8.0
+dpshdl==0.0.21
+email-validator==2.3.0
+equinox==0.13.0
+etils==1.13.0
+executing==2.2.1
+fastjsonschema==2.21.2
+filelock==3.19.1
+flatbuffers==25.9.23
+fonttools==4.60.1
+fqdn==1.5.1
+frozenlist==1.7.0
+fsspec==2025.9.0
+gast==0.6.0
+gitdb==4.0.12
+GitPython==3.1.45
+glfw==2.10.0
+google-pasta==0.2.0
+grpcio==1.75.1
+h11==0.16.0
+h5py==3.14.0
+httpcore==1.0.9
+httpx==0.28.1
+humanfriendly==10.0
+humanize==4.13.0
+identify==2.6.14
+idna==3.10
+importlib_resources==6.5.2
+ipykernel==6.30.1
+ipython==9.6.0
+ipython_pygments_lexers==1.1.1
+ipywidgets==8.1.7
+isoduration==20.11.0
+jax==0.7.1
+jax-cuda12-pjrt==0.7.1
+jax-cuda12-plugin==0.7.1
+jaxlib==0.7.1
+jaxtyping==0.3.2
+jedi==0.19.2
+Jinja2==3.1.6
+json5==0.12.1
+jsonpointer==3.0.0
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+jupyter==1.1.1
+jupyter-console==6.6.3
+jupyter-events==0.12.0
+jupyter-lsp==2.3.0
+jupyter_client==8.6.3
+jupyter_core==5.8.1
+jupyter_server==2.17.0
+jupyter_server_terminals==0.5.3
+jupyterlab==4.4.9
+jupyterlab_pygments==0.3.0
+jupyterlab_server==2.27.3
+jupyterlab_widgets==3.0.15
+keras==3.11.3
+kinfer==0.5.6
+kiwisolver==1.4.9
+kscale==0.3.18
+ksim==0.1.3
+lark==1.3.0
+libclang==18.1.1
+Markdown==3.9
+markdown-it-py==4.0.0
+MarkupSafe==3.0.3
+matplotlib==3.10.6
+matplotlib-inline==0.1.7
+mdurl==0.1.2
+mediapy==1.2.4
+mistune==3.1.4
+ml_dtypes==0.5.3
+mpmath==1.3.0
+msgpack==1.1.1
+mujoco==3.3.6
+mujoco-mjx==3.3.6
+mujoco-scenes==0.0.16
+multidict==6.6.4
+namex==0.1.0
+nbclient==0.10.2
+nbconvert==7.16.6
+nbformat==5.10.4
+nest-asyncio==1.6.0
+nodeenv==1.9.1
+notebook==7.4.7
+notebook_shim==0.2.4
+numpy==1.26.4
+nvidia-cublas-cu12==12.9.1.4
+nvidia-cuda-cupti-cu12==12.9.79
+nvidia-cuda-nvcc-cu12==12.9.86
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cudnn-cu12==9.13.1.26
+nvidia-cufft-cu12==11.4.1.4
+nvidia-cusolver-cu12==11.7.5.82
+nvidia-cusparse-cu12==12.5.10.65
+nvidia-nccl-cu12==2.28.3
+nvidia-nvjitlink-cu12==12.9.86
+nvidia-nvshmem-cu12==3.4.5
+omegaconf==2.3.0
+onnx==1.17.0
+onnxruntime==1.20.0
+opt_einsum==3.4.0
+optax==0.2.6
+optree==0.17.0
+orbax-checkpoint==0.11.25
+overrides==7.7.0
+packaging==25.0
+pandocfilters==1.5.1
+parso==0.8.5
+pexpect==4.9.0
+pillow==11.3.0
+platformdirs==4.4.0
+pre_commit==4.3.0
+prometheus_client==0.23.1
+prompt_toolkit==3.0.52
+propcache==0.3.2
+protobuf==3.20.3
+psutil==7.1.0
+ptyprocess==0.7.0
+pure_eval==0.2.3
+pycparser==2.23
+pydantic==2.11.9
+pydantic_core==2.33.2
+pyglm==2.8.2
+Pygments==2.19.2
+PyJWT==2.10.1
+PyOpenGL==3.1.10
+pyparsing==3.2.5
+python-dateutil==2.9.0.post0
+python-json-logger==3.3.0
+PyYAML==6.0.3
+pyzmq==27.1.0
+referencing==0.36.2
+requests==2.32.5
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rfc3987-syntax==1.1.0
+rich==14.1.0
+rpds-py==0.27.1
+scipy==1.16.2
+Send2Trash==1.8.3
+simplejson==3.20.2
+six==1.17.0
+smmap==5.0.2
+sniffio==1.3.1
+soupsieve==2.8
+spatial-transform==1.3.1
+stack-data==0.6.3
+sympy==1.14.0
+tabulate==0.9.0
+tensorboard==2.19.0
+tensorboard-data-server==0.7.2
+tensorflow==2.19.1
+tensorflow-io-gcs-filesystem==0.37.1
+tensorstore==0.1.77
+termcolor==3.1.0
+terminado==0.18.1
+tf2onnx==1.16.1
+tfp-nightly==0.26.0.dev20250930
+tinycss2==1.4.0
+toolz==1.0.0
+tornado==6.5.2
+tqdm==4.67.1
+traitlets==5.14.3
+trimesh==4.8.3
+types-python-dateutil==2.9.0.20250822
+typing-inspection==0.4.1
+typing_extensions==4.15.0
+uri-template==1.3.0
+urllib3==2.5.0
+virtualenv==20.34.0
+wadler_lindig==0.1.7
+wcwidth==0.2.14
+webcolors==24.11.1
+webencodings==0.5.1
+websocket-client==1.8.0
+Werkzeug==3.1.3
+widgetsnbextension==4.0.14
+wrapt==1.17.3
+xax==0.3.0
+yarl==1.20.1
+zipp==3.23.0
+Checking JAX backend:
+gpu
+Set MUJOCO_GL=osmesa for headless rendering
+
+Successfully installed jax-cuda12-pjrt-0.7.1 jax-cuda12-plugin-0.7.1 nvidia-cublas-cu12-12.9.1.4 nvidia-cuda-cupti-cu12-12.9.79 nvidia-cuda-nvcc-cu12-12.9.86 nvidia-cuda-nvrtc-cu12-12.9.86 nvidia-cuda-runtime-cu12-12.9.79 nvidia-cudnn-cu12-9.13.1.26 nvidia-cufft-cu12-11.4.1.4 nvidia-cusolver-cu12-11.7.5.82 nvidia-cusparse-cu12-12.5.10.65 nvidia-nccl-cu12-2.28.3 nvidia-nvjitlink-cu12-12.9.86 nvidia-nvshmem-cu12-3.4.5
+Installed dependencies:
+absl-py==2.3.1
+aiofiles==24.1.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.12.15
+aiosignal==1.4.0
+annotated-types==0.7.0
+antlr4-python3-runtime==4.9.3
+anyio==4.11.0
+argon2-cffi==25.1.0
+argon2-cffi-bindings==25.1.0
+arrow==1.3.0
+asttokens==3.0.0
+astunparse==1.6.3
+async-lru==2.0.5
+attrs==25.3.0
+babel==2.17.0
+beautifulsoup4==4.14.2
+bleach==6.2.0
+bvhio==1.5.3
+certifi==2025.8.3
+cffi==2.0.0
+cfgv==3.4.0
+charset-normalizer==3.4.3
+chex==0.1.91
+click==8.3.0
+cloudpickle==3.1.1
+coloredlogs==15.0.1
+colorlogging==0.0.2
+comm==0.2.3
+contourpy==1.3.3
+cryptography==46.0.1
+cycler==0.12.1
+debugpy==1.8.17
+decorator==5.2.1
+defusedxml==0.7.1
+distlib==0.4.0
+distrax==0.1.7
+dm-tree==0.1.9
+dnspython==2.8.0
+dpshdl==0.0.21
+email-validator==2.3.0
+equinox==0.13.0
+etils==1.13.0
+executing==2.2.1
+fastjsonschema==2.21.2
+filelock==3.19.1
+flatbuffers==25.9.23
+fonttools==4.60.1
+fqdn==1.5.1
+frozenlist==1.7.0
+fsspec==2025.9.0
+gast==0.6.0
+gitdb==4.0.12
+GitPython==3.1.45
+glfw==2.10.0
+google-pasta==0.2.0
+grpcio==1.75.1
+h11==0.16.0
+h5py==3.14.0
+httpcore==1.0.9
+httpx==0.28.1
+humanfriendly==10.0
+humanize==4.13.0
+identify==2.6.14
+idna==3.10
+importlib_resources==6.5.2
+ipykernel==6.30.1
+ipython==9.6.0
+ipython_pygments_lexers==1.1.1
+ipywidgets==8.1.7
+isoduration==20.11.0
+jax==0.7.1
+jax-cuda12-pjrt==0.7.1
+jax-cuda12-plugin==0.7.1
+jaxlib==0.7.1
+jaxtyping==0.3.2
+jedi==0.19.2
+Jinja2==3.1.6
+json5==0.12.1
+jsonpointer==3.0.0
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+jupyter==1.1.1
+jupyter-console==6.6.3
+jupyter-events==0.12.0
+jupyter-lsp==2.3.0
+jupyter_client==8.6.3
+jupyter_core==5.8.1
+jupyter_server==2.17.0
+jupyter_server_terminals==0.5.3
+jupyterlab==4.4.9
+jupyterlab_pygments==0.3.0
+jupyterlab_server==2.27.3
+jupyterlab_widgets==3.0.15
+keras==3.11.3
+kinfer==0.5.6
+kiwisolver==1.4.9
+kscale==0.3.18
+ksim==0.1.3
+lark==1.3.0
+libclang==18.1.1
+Markdown==3.9
+markdown-it-py==4.0.0
+MarkupSafe==3.0.3
+matplotlib==3.10.6
+matplotlib-inline==0.1.7
+mdurl==0.1.2
+mediapy==1.2.4
+mistune==3.1.4
+ml_dtypes==0.5.3
+mpmath==1.3.0
+msgpack==1.1.1
+mujoco==3.3.6
+mujoco-mjx==3.3.6
+mujoco-scenes==0.0.16
+multidict==6.6.4
+namex==0.1.0
+nbclient==0.10.2
+nbconvert==7.16.6
+nbformat==5.10.4
+nest-asyncio==1.6.0
+nodeenv==1.9.1
+notebook==7.4.7
+notebook_shim==0.2.4
+numpy==1.26.4
+nvidia-cublas-cu12==12.9.1.4
+nvidia-cuda-cupti-cu12==12.9.79
+nvidia-cuda-nvcc-cu12==12.9.86
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cudnn-cu12==9.13.1.26
+nvidia-cufft-cu12==11.4.1.4
+nvidia-cusolver-cu12==11.7.5.82
+nvidia-cusparse-cu12==12.5.10.65
+nvidia-nccl-cu12==2.28.3
+nvidia-nvjitlink-cu12==12.9.86
+nvidia-nvshmem-cu12==3.4.5
+omegaconf==2.3.0
+onnx==1.17.0
+onnxruntime==1.20.0
+opt_einsum==3.4.0
+optax==0.2.6
+optree==0.17.0
+orbax-checkpoint==0.11.25
+overrides==7.7.0
+packaging==25.0
+pandocfilters==1.5.1
+parso==0.8.5
+pexpect==4.9.0
+pillow==11.3.0
+platformdirs==4.4.0
+pre_commit==4.3.0
+prometheus_client==0.23.1
+prompt_toolkit==3.0.52
+propcache==0.3.2
+protobuf==3.20.3
+psutil==7.1.0
+ptyprocess==0.7.0
+pure_eval==0.2.3
+pycparser==2.23
+pydantic==2.11.9
+pydantic_core==2.33.2
+pyglm==2.8.2
+Pygments==2.19.2
+PyJWT==2.10.1
+PyOpenGL==3.1.10
+pyparsing==3.2.5
+python-dateutil==2.9.0.post0
+python-json-logger==3.3.0
+PyYAML==6.0.3
+pyzmq==27.1.0
+referencing==0.36.2
+requests==2.32.5
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rfc3987-syntax==1.1.0
+rich==14.1.0
+rpds-py==0.27.1
+scipy==1.16.2
+Send2Trash==1.8.3
+simplejson==3.20.2
+six==1.17.0
+smmap==5.0.2
+sniffio==1.3.1
+soupsieve==2.8
+spatial-transform==1.3.1
+stack-data==0.6.3
+sympy==1.14.0
+tabulate==0.9.0
+tensorboard==2.19.0
+tensorboard-data-server==0.7.2
+tensorflow==2.19.1
+tensorflow-io-gcs-filesystem==0.37.1
+tensorstore==0.1.77
+termcolor==3.1.0
+terminado==0.18.1
+tf2onnx==1.16.1
+tfp-nightly==0.26.0.dev20250930
+tinycss2==1.4.0
+toolz==1.0.0
+tornado==6.5.2
+tqdm==4.67.1
+traitlets==5.14.3
+trimesh==4.8.3
+types-python-dateutil==2.9.0.20250822
+typing-inspection==0.4.1
+typing_extensions==4.15.0
+uri-template==1.3.0
+urllib3==2.5.0
+virtualenv==20.34.0
+wadler_lindig==0.1.7
+wcwidth==0.2.14
+webcolors==24.11.1
+webencodings==0.5.1
+websocket-client==1.8.0
+Werkzeug==3.1.3
+widgetsnbextension==4.0.14
+wrapt==1.17.3
+xax==0.3.0
+yarl==1.20.1
+zipp==3.23.0
+Checking JAX backend:
+gpu
+Set MUJOCO_GL=osmesa for headless rendering
+Failed to import warp: No module named 'warp'
+Failed to import mujoco.mjx.third_party.mujoco_warp as mujoco_warp: No module named 'warp'
+Failed to import warp: No module named 'warp'
+Failed to import mujoco.mjx.third_party.mujoco_warp as mujoco_warp: No module named 'warp'
+  [1;36mINFO[0m  [90m2025-09-30 17:39:00[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-09-30 17:39:00[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-09-30 17:39:00[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+  [1;36mINFO[0m  [90m2025-09-30 17:39:01[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:02[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_0
+{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_0", "filename": "artifacts.py", "lineno": 83}}
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:02[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/ksim-gym-example/train.py
+{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/train.py", "filename": "train.py", "lineno": 709}}
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:02[0m [[1;34mxax.task.mixins.train[0m] humanoid_walking_task
+{"status": {"message": "humanoid_walking_task", "filename": "train.py", "lineno": 710}}
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:02[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+{"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 711}}
+  [1;36mINFO[0m  [90m2025-09-30 17:39:04[0m [[1;34mhttpx[0m] HTTP Request: GET https://api.kscale.dev/robots/urdf/kbot "HTTP/1.1 200 OK"
+  [1;36mINFO[0m  [90m2025-09-30 17:39:05[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-09-30 17:39:05[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-09-30 17:39:05[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+  [1;36mINFO[0m  [90m2025-09-30 17:39:06[0m [[1;34mhttpx[0m] HTTP Request: GET https://api.kscale.dev/robots/name/kbot "HTTP/1.1 200 OK"
+  [1;36mINFO[0m  [90m2025-09-30 17:39:06[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+  [1;36mINFO[0m  [90m2025-09-30 17:39:06[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:06[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_1
+{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_1", "filename": "artifacts.py", "lineno": 83}}
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:06[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/ksim-gym-example/train.py
+{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/train.py", "filename": "train.py", "lineno": 709}}
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:06[0m [[1;34mxax.task.mixins.train[0m] humanoid_walking_task
+{"status": {"message": "humanoid_walking_task", "filename": "train.py", "lineno": 710}}
+ [1;32mSTATUS[0m [90m2025-09-30 17:39:06[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+  [1;35mPING[0m  [90m2025-09-30 17:39:07[0m [[1;34mksim.task.rl[0m] Model size: 1,090,861 parameters
+{"ping": {"message": "Model size: 1,090,861 parameters", "filename": "rl.py", "lineno": 1962}}
+  [1;35mPING[0m  [90m2025-09-30 17:39:07[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,181,722 parameters
+{"ping": {"message": "Optimizer size: 2,181,722 parameters", "filename": "rl.py", "lineno": 1963}}
+  [1;36mINFO[0m  [90m2025-09-30 17:39:07[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+{"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 711}}
+  [1;36mINFO[0m  [90m2025-09-30 17:39:08[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+  [1;35mPING[0m  [90m2025-09-30 17:39:09[0m [[1;34mksim.task.rl[0m] Model size: 1,090,861 parameters
+{"ping": {"message": "Model size: 1,090,861 parameters", "filename": "rl.py", "lineno": 1962}}
+  [1;35mPING[0m  [90m2025-09-30 17:39:09[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,181,722 parameters
+{"ping": {"message": "Optimizer size: 2,181,722 parameters", "filename": "rl.py", "lineno": 1963}}
+  [1;36mINFO[0m  [90m2025-09-30 17:39:09[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+Failed to import warp: No module named 'warp'
+Failed to import mujoco.mjx.third_party.mujoco_warp as mujoco_warp: No module named 'warp'
+Job finished
+Failed to import warp: No module named 'warp'
+Failed to import mujoco.mjx.third_party.mujoco_warp as mujoco_warp: No module named 'warp'
+Job finished

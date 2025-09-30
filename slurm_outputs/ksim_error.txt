@@ -1,0 +1,262 @@
+2025-09-30 17:38:32.525307: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1759246712.634684 2386799 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1759246712.675736 2386799 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1759246712.907953 2386799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246712.908014 2386799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246712.908023 2386799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246712.908028 2386799 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-09-30 17:38:44.762868: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1759246724.883640  859031 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1759246724.929236  859031 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1759246725.174577  859031 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246725.174635  859031 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246725.174649  859031 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246725.174660  859031 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/ksim-gym-example/train.py:162: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:163: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:164: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:165: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:166: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:167: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:249: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+2025-09-30 17:38:55.679236: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1759246735.695706 2388074 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1759246735.701081 2388074 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1759246735.715800 2388074 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246735.715848 2388074 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246735.715854 2388074 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246735.715859 2388074 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/ksim-gym-example/train.py:162: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:163: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:164: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:165: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:166: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:167: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:249: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+2025-09-30 17:38:58.629104: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1759246738.652014  859038 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1759246738.659869  859038 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1759246738.680692  859038 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246738.680740  859038 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246738.680754  859038 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759246738.680765  859038 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/ksim-gym-example/train.py:162: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:163: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:164: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:165: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:166: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:167: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:249: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+2025-09-30 17:39:01.387859: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
+2025-09-30 17:39:01.388292: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
+INFO:2025-09-30 17:39:01,391:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2025-09-30 17:39:01.391868: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
+2025-09-30 17:39:01.558790: I external/xla/xla/service/service.cc:163] XLA service 0x98a5580 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2025-09-30 17:39:01.558853: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA H100 80GB HBM3, Compute Capability 9.0
+2025-09-30 17:39:01.597874: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91301
+2025-09-30 17:39:01.598219: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
+/cluster/work/sebasrb/ksim-gym-example/train.py:162: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:163: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:164: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:165: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:166: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:167: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:249: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+2025-09-30 17:39:06.153343: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
+2025-09-30 17:39:06.153912: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
+INFO:2025-09-30 17:39:06,158:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2025-09-30 17:39:06.160097: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
+2025-09-30 17:39:06.441645: I external/xla/xla/service/service.cc:163] XLA service 0x9274600 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2025-09-30 17:39:06.441727: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA A100-PCIE-40GB, Compute Capability 8.0
+2025-09-30 17:39:06.462297: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91301
+2025-09-30 17:39:06.462642: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/cluster/work/sebasrb/ksim-gym-example/train.py", line 640, in <module>
+    HumanoidWalkingTask.launch(
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 51, in launch
+    launcher.launch(cls, *cfgs, use_cli=use_cli)
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
+    SingleProcessLauncher().launch(task, *cfgs, use_cli=use_cli_next)
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 30, in launch
+    run_single_process_training(task, *cfgs, use_cli=use_cli)
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 20, in run_single_process_training
+    task_obj.run()
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1009, in run
+    self.run_training()
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2042, in run_training
+    constants, carry, state = self.initialize_rl_training(mj_model, rng)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1990, in initialize_rl_training
+    env_states=self._get_env_state(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1801, in _get_env_state
+    randomization_dict, physics_state = randomization_fn(
+                                        ^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 322, in apply_randomizations
+    physics_state = engine.reset(physics_model, curriculum_level, reset_rng)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/equinox/_module/_prebuilt.py", line 33, in __call__
+    return self.__func__(self.__self__, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py", line 139, in wrapped
+    res = jitted_fn(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Non-hashable static arguments are not supported. An error occurred while trying to hash an object of type <class 'ksim.engine.MjxEngine'>, MjxEngine(
+  actuators=<ksim.actuators.PositionActuators object at 0x149f520482d0>,
+  resets=[
+    RandomJointPositionReset(scale=0.1, zeros=(0.0, -0.17453292519943295, 0.0, 1.5707963267948966, 0.0, 0.0, 0.17453292519943295, 0.0, -1.5707963267948966, 0.0, -0.3490658503988659, -0.0, 0.0, -0.8726646259971648, 0.5235987755982988, 0.3490658503988659, 0.0, 0.0, 0.8726646259971648, -0.5235987755982988)),
+    RandomJointVelocityReset(scale=0.01)
+  ],
+  events=[
+    PushEvent(x_force=1.0, y_force=1.0, z_force=0.3, force_range=(0.5, 1.0), x_angular_force=0.0, y_angular_force=0.0, z_angular_force=0.0, interval_range=(0.5, 4.0))
+  ],
+  phys_steps_per_ctrl_steps=10,
+  min_action_latency_step=1.4999999287538264,
+  max_action_latency_step=4.999999762512755,
+  drop_action_prob=0.05
+). The error was:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/cluster/work/sebasrb/ksim-gym-example/train.py", line 640, in <module>
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 51, in launch
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 30, in launch
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 20, in run_single_process_training
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1009, in run
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2042, in run_training
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1990, in initialize_rl_training
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1801, in _get_env_state
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/api.py", line 1112, in vmap_f
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/linear_util.py", line 212, in call_wrapped
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 644, in _batch_outer
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 660, in _batch_inner
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 342, in flatten_fun_for_vmap
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/linear_util.py", line 397, in _get_result_paths_thunk
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 322, in apply_randomizations
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/equinox/_module/_prebuilt.py", line 33, in __call__
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py", line 139, in wrapped
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 270, in cache_miss
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 139, in _python_pjit_helper
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 643, in _infer_params
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 664, in _infer_params_internal
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/equinox/_module/_module.py", line 516, in __hash__
+TypeError: unhashable type: 'list'
+
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/cluster/work/sebasrb/ksim-gym-example/train.py", line 640, in <module>
+    HumanoidWalkingTask.launch(
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 51, in launch
+    launcher.launch(cls, *cfgs, use_cli=use_cli)
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
+    SingleProcessLauncher().launch(task, *cfgs, use_cli=use_cli_next)
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 30, in launch
+    run_single_process_training(task, *cfgs, use_cli=use_cli)
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 20, in run_single_process_training
+    task_obj.run()
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1009, in run
+    self.run_training()
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2042, in run_training
+    constants, carry, state = self.initialize_rl_training(mj_model, rng)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1990, in initialize_rl_training
+    env_states=self._get_env_state(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1801, in _get_env_state
+    randomization_dict, physics_state = randomization_fn(
+                                        ^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 322, in apply_randomizations
+    physics_state = engine.reset(physics_model, curriculum_level, reset_rng)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/equinox/_module/_prebuilt.py", line 33, in __call__
+    return self.__func__(self.__self__, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py", line 139, in wrapped
+    res = jitted_fn(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Non-hashable static arguments are not supported. An error occurred while trying to hash an object of type <class 'ksim.engine.MjxEngine'>, MjxEngine(
+  actuators=<ksim.actuators.PositionActuators object at 0x1515583dcb90>,
+  resets=[
+    RandomJointPositionReset(scale=0.1, zeros=(0.0, -0.17453292519943295, 0.0, 1.5707963267948966, 0.0, 0.0, 0.17453292519943295, 0.0, -1.5707963267948966, 0.0, -0.3490658503988659, -0.0, 0.0, -0.8726646259971648, 0.5235987755982988, 0.3490658503988659, 0.0, 0.0, 0.8726646259971648, -0.5235987755982988)),
+    RandomJointVelocityReset(scale=0.01)
+  ],
+  events=[
+    PushEvent(x_force=1.0, y_force=1.0, z_force=0.3, force_range=(0.5, 1.0), x_angular_force=0.0, y_angular_force=0.0, z_angular_force=0.0, interval_range=(0.5, 4.0))
+  ],
+  phys_steps_per_ctrl_steps=10,
+  min_action_latency_step=1.4999999287538264,
+  max_action_latency_step=4.999999762512755,
+  drop_action_prob=0.05
+). The error was:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/cluster/work/sebasrb/ksim-gym-example/train.py", line 640, in <module>
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 51, in launch
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 30, in launch
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 20, in run_single_process_training
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1009, in run
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2042, in run_training
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1990, in initialize_rl_training
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1801, in _get_env_state
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/api.py", line 1112, in vmap_f
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/linear_util.py", line 212, in call_wrapped
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 644, in _batch_outer
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 660, in _batch_inner
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 342, in flatten_fun_for_vmap
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/linear_util.py", line 397, in _get_result_paths_thunk
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 322, in apply_randomizations
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/equinox/_module/_prebuilt.py", line 33, in __call__
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py", line 139, in wrapped
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 270, in cache_miss
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 139, in _python_pjit_helper
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 643, in _infer_params
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/jax/_src/pjit.py", line 664, in _infer_params_internal
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/site-packages/equinox/_module/_module.py", line 516, in __hash__
+TypeError: unhashable type: 'list'
+
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
