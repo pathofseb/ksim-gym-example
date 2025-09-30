@@ -26,9 +26,9 @@ module purge
 module load Python/3.11.3-GCCcore-12.3.0
 module load CUDA/12.1.1
 
-# Install dependencies with compatible JAX version
+# Install dependencies with compatible JAX version (4 months old)
 pip install --user -r requirements.txt
-pip install --user 'jax[cuda12]==0.4.20' 'jaxlib[cuda12]==0.4.20'
+pip install --user --force-reinstall 'jax[cuda12]==0.4.28' 'jaxlib[cuda12]==0.4.28'
 
 echo "Installed dependencies:"
 pip list --user
