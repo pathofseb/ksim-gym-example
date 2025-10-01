@@ -36,16 +36,16 @@ fi
 # Activate environment
 source activate ${ENV_PATH}
 
-# Install dependencies (CPU-only JAX)
+# Install dependencies
 pip install -r requirements.txt
-pip install jax jaxlib  # CPU-only JAX, no CUDA
+pip install 'jax[cuda12]'  # If using GPU machine, install JAX CUDA libraries
 
 echo "Installed dependencies:"
 pip freeze
 
-# Verify JAX backend
+# Verify GPU backend
 echo "Checking JAX backend:"
-python -c "import jax; print('JAX version:', jax.__version__); print('JAX backend:', jax.default_backend()); print('JAX devices:', jax.devices())"
+python -c "import jax; print(jax.default_backend())"  # Should print "gpu"
 
 # Set MuJoCo to use headless rendering backend (osmesa)
 export MUJOCO_GL=osmesa
