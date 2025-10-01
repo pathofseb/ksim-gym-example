@@ -1,29 +1,11 @@
-/cluster/apps/eb/software/Anaconda3/2024.02-1/lib/python3.10/site-packages/conda/base/context.py:202: FutureWarning: Adding 'defaults' to channel list implicitly is deprecated and will be removed in 25.3. 
-
-To remove this warning, please choose a default channel explicitly with conda's regular configuration system, e.g. by adding 'defaults' to the list of channels:
-
-  conda config --add channels defaults
-
-For more information see https://docs.conda.io/projects/conda/en/stable/user-guide/configuration/use-condarc.html
-
-  deprecated.topic(
-/cluster/apps/eb/software/Anaconda3/2024.02-1/lib/python3.10/site-packages/conda/base/context.py:202: FutureWarning: Adding 'defaults' to channel list implicitly is deprecated and will be removed in 25.3. 
-
-To remove this warning, please choose a default channel explicitly with conda's regular configuration system, e.g. by adding 'defaults' to the list of channels:
-
-  conda config --add channels defaults
-
-For more information see https://docs.conda.io/projects/conda/en/stable/user-guide/configuration/use-condarc.html
-
-  deprecated.topic(
-2025-10-01 14:18:59.874189: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-10-01 14:46:12.792190: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1759321140.879135 1997781 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1759321141.534227 1997781 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1759321143.738486 1997781 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1759321143.738556 1997781 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1759321143.738565 1997781 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1759321143.738570 1997781 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1759322773.744219  865933 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1759322774.276464  865933 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1759322776.045771  865933 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759322776.045823  865933 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759322776.045836  865933 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759322776.045845  865933 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
 /cluster/work/sebasrb/ksim-gym-example/train.py:162: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
 /cluster/work/sebasrb/ksim-gym-example/train.py:163: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
@@ -38,14 +20,14 @@ W0000 00:00:1759321143.738570 1997781 computation_placer.cc:177] computation pla
   var_scale: float = eqx.static_field()
 /cluster/work/sebasrb/ksim-gym-example/train.py:249: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
-2025-10-01 14:20:24.505409: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-10-01 14:46:59.401892: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1759321224.520980 2003134 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1759321224.526317 2003134 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1759321224.540570 2003134 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1759321224.540618 2003134 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1759321224.540624 2003134 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1759321224.540629 2003134 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1759322819.426314  865942 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1759322819.434598  865942 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1759322819.456220  865942 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759322819.456262  865942 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759322819.456276  865942 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759322819.456286  865942 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
 /cluster/work/sebasrb/ksim-gym-example/train.py:162: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
 /cluster/work/sebasrb/ksim-gym-example/train.py:163: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
@@ -60,14 +42,14 @@ W0000 00:00:1759321224.540629 2003134 computation_placer.cc:177] computation pla
   var_scale: float = eqx.static_field()
 /cluster/work/sebasrb/ksim-gym-example/train.py:249: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
-2025-10-01 14:20:35.448265: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
-2025-10-01 14:20:35.448695: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
-INFO:2025-10-01 14:20:35,452:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
-2025-10-01 14:20:35.452279: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
-2025-10-01 14:20:35.614561: I external/xla/xla/service/service.cc:163] XLA service 0x9c64f50 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
-2025-10-01 14:20:35.614627: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA H100 80GB HBM3, Compute Capability 9.0
-2025-10-01 14:20:35.644616: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91301
-2025-10-01 14:20:35.644999: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
+2025-10-01 14:47:13.100687: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
+2025-10-01 14:47:13.101262: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
+INFO:2025-10-01 14:47:13,105:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2025-10-01 14:47:13.106073: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
+2025-10-01 14:47:13.390559: I external/xla/xla/service/service.cc:163] XLA service 0xb1f0f70 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2025-10-01 14:47:13.390643: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA A100-PCIE-40GB, Compute Capability 8.0
+2025-10-01 14:47:13.404543: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91301
+2025-10-01 14:47:13.404883: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
@@ -101,49 +83,12 @@ Traceback (most recent call last):
   File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/utils/jax.py", line 139, in wrapped
     res = jitted_fn(*args, **kwargs)
           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: Non-hashable static arguments are not supported. An error occurred while trying to hash an object of type <class 'ksim.engine.MjxEngine'>, MjxEngine(
-  actuators=<ksim.actuators.PositionActuators object at 0x149328168210>,
-  resets=[
-    RandomJointPositionReset(scale=0.1, zeros=(0.0, -0.17453292519943295, 0.0, 1.5707963267948966, 0.0, 0.0, 0.17453292519943295, 0.0, -1.5707963267948966, 0.0, -0.3490658503988659, -0.0, 0.0, -0.8726646259971648, 0.5235987755982988, 0.3490658503988659, 0.0, 0.0, 0.8726646259971648, -0.5235987755982988)),
-    RandomJointVelocityReset(scale=0.01)
-  ],
-  events=[
-    PushEvent(x_force=1.0, y_force=1.0, z_force=0.3, force_range=(0.5, 1.0), x_angular_force=0.0, y_angular_force=0.0, z_angular_force=0.0, interval_range=(0.5, 4.0))
-  ],
-  phys_steps_per_ctrl_steps=10,
-  min_action_latency_step=1.4999999287538264,
-  max_action_latency_step=4.999999762512755,
-  drop_action_prob=0.05
-). The error was:
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/cluster/work/sebasrb/ksim-gym-example/train.py", line 640, in <module>
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 51, in launch
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 30, in launch
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 20, in run_single_process_training
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/ksim/task/rl.py", line 1009, in run
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/ksim/task/rl.py", line 2042, in run_training
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/ksim/task/rl.py", line 1990, in initialize_rl_training
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/ksim/task/rl.py", line 1801, in _get_env_state
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/api.py", line 1112, in vmap_f
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/linear_util.py", line 212, in call_wrapped
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 644, in _batch_outer
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 660, in _batch_inner
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/interpreters/batching.py", line 342, in flatten_fun_for_vmap
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/linear_util.py", line 397, in _get_result_paths_thunk
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/ksim/task/rl.py", line 322, in apply_randomizations
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/equinox/_module/_prebuilt.py", line 33, in __call__
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/utils/jax.py", line 139, in wrapped
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/pjit.py", line 270, in cache_miss
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/pjit.py", line 139, in _python_pjit_helper
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/pjit.py", line 643, in _infer_params
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/jax/_src/pjit.py", line 664, in _infer_params_internal
-  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/equinox/_module/_module.py", line 516, in __hash__
-TypeError: unhashable type: 'list'
-
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/ksim/engine.py", line 106, in reset
+    mjx_data = mjx_data.replace(
+               ^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/ksim-gym-example/ksim-env/lib/python3.11/dataclasses.py", line 1503, in replace
+    return obj.__class__(**changes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Data.__init__() got an unexpected keyword argument 'cacc'
 --------------------
 For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
