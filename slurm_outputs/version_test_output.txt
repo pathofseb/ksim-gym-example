@@ -1,0 +1,11 @@
+Running version test from directory: /cluster/work/sebasrb/ksim-gym-example
+Python version:
+Python 3.11.13
+MuJoCo version:
+MuJoCo version: 3.3.6
+JAX version:
+JAX version: 0.7.1
+JAX backend:
+JAX backend: gpu
+Testing basic model loading:
+Version test finished
