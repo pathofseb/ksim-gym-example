@@ -39,37 +39,65 @@ python -c "import jax; print('JAX version:', jax.__version__)"
 echo "JAX backend:"
 python -c "import jax; print('JAX backend:', jax.default_backend())"
 
-echo "Testing MuJoCo-JAX compatibility:"
+echo "Testing training pipeline step by step:"
 python -c "
-import mujoco
-import mujoco.mjx as mjx
-import jax
+import sys
+import traceback
 
-# Test basic MuJoCo model creation
-print('Testing basic MuJoCo model...')
-xml = '''
-<mujoco>
-  <worldbody>
-    <body>
-      <geom type=\"sphere\" size=\"1\"/>
-    </body>
-  </worldbody>
-</mujoco>
-'''
-model = mujoco.MjModel.from_xml_string(xml)
-data = mujoco.MjData(model)
-print('Basic MuJoCo model created successfully')
-
-# Test MJX conversion
-print('Testing MJX conversion...')
 try:
-    mjx_model = mjx.put_model(model)
-    mjx_data = mjx.put_data(model, data)
-    print('MJX conversion successful')
-    print('MJX data fields:', dir(mjx_data))
+    print('1. Importing modules...')
+    import train
+    import ksim
+    import asyncio
+
+    print('2. Creating task with minimal config...')
+    # Create a minimal config object
+    import argparse
+    from dataclasses import dataclass
+
+    @dataclass
+    class MinimalConfig:
+        max_steps: int = 10
+
+    config = MinimalConfig()
+
+    print('3. Creating HumanoidWalkingTask...')
+    task = train.HumanoidWalkingTask(config=config)
+
+    print('4. Getting MuJoCo model...')
+    mj_model = task.get_mujoco_model()
+    print(f'   Model loaded with {mj_model.njnt} joints')
+
+    print('5. Getting physics model...')
+    physics_model = task.get_physics_model(mj_model)
+    print('   Physics model created')
+
+    print('6. Testing events and resets (our tuple fix)...')
+    events = task.get_events(physics_model)
+    resets = task.get_resets(physics_model)
+    print(f'   Events type: {type(events)}, length: {len(events)}')
+    print(f'   Resets type: {type(resets)}, length: {len(resets)}')
+
+    print('7. Creating engine...')
+    engine = ksim.engine.MjxEngine(
+        physics_model=physics_model,
+        resets=resets,
+        events=events,
+    )
+    print('   Engine created successfully')
+
+    print('8. Testing engine reset...')
+    # This is where the error likely occurs
+    import jax
+    rng = jax.random.PRNGKey(0)
+    state = engine.reset(physics_model, 0.5, rng)
+    print('   Engine reset successful!')
+
 except Exception as e:
-    print('MJX conversion failed:', str(e))
-    print('Error type:', type(e).__name__)
+    print(f'ERROR at step: {str(e)}')
+    print(f'Error type: {type(e).__name__}')
+    print('Full traceback:')
+    traceback.print_exc()
 "
 
 conda deactivate
