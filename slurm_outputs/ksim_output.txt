@@ -1,7 +1,7 @@
 Running from directory: /cluster/work/sebasrb/ksim-gym-example
 Job name: ksim-zbot-train
-Job ID: 23100439
-Node(s): idun-09-18
+Job ID: 23103193
+Node(s): idun-01-03
 Requirement already satisfied: ksim==0.1.3 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.1.3)
 Requirement already satisfied: xax==0.3.0 in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.3.0)
 Requirement already satisfied: mujoco-scenes in /cluster/home/sebasrb/.local/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (0.0.16)
@@ -458,23 +458,25 @@ zipp==3.23.0
 Checking JAX backend:
 gpu
 Set MUJOCO_GL=osmesa for headless rendering
-  [1;36mINFO[0m  [90m2025-10-01 14:47:12[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
-  [1;36mINFO[0m  [90m2025-10-01 14:47:12[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
-  [1;36mINFO[0m  [90m2025-10-01 14:47:12[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
-  [1;36mINFO[0m  [90m2025-10-01 14:47:13[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
- [1;32mSTATUS[0m [90m2025-10-01 14:47:13[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_7
-{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_7", "filename": "artifacts.py", "lineno": 83}}
- [1;32mSTATUS[0m [90m2025-10-01 14:47:13[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/ksim-gym-example/train.py
+  [1;36mINFO[0m  [90m2025-10-02 19:17:41[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-10-02 19:17:41[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-10-02 19:17:41[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+  [1;36mINFO[0m  [90m2025-10-02 19:17:42[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+ [1;32mSTATUS[0m [90m2025-10-02 19:17:43[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_8
+{"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/humanoid_walking_task/run_8", "filename": "artifacts.py", "lineno": 83}}
+ [1;32mSTATUS[0m [90m2025-10-02 19:17:43[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/ksim-gym-example/train.py
 {"status": {"message": "/cluster/work/sebasrb/ksim-gym-example/train.py", "filename": "train.py", "lineno": 709}}
- [1;32mSTATUS[0m [90m2025-10-01 14:47:13[0m [[1;34mxax.task.mixins.train[0m] humanoid_walking_task
+ [1;32mSTATUS[0m [90m2025-10-02 19:17:43[0m [[1;34mxax.task.mixins.train[0m] humanoid_walking_task
 {"status": {"message": "humanoid_walking_task", "filename": "train.py", "lineno": 710}}
- [1;32mSTATUS[0m [90m2025-10-01 14:47:13[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+ [1;32mSTATUS[0m [90m2025-10-02 19:17:43[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
 {"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 711}}
-  [1;36mINFO[0m  [90m2025-10-01 14:47:15[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
-  [1;35mPING[0m  [90m2025-10-01 14:47:16[0m [[1;34mksim.task.rl[0m] Model size: 1,090,861 parameters
+  [1;36mINFO[0m  [90m2025-10-02 19:17:45[0m [[1;34mhttpx[0m] HTTP Request: GET https://api.kscale.dev/robots/urdf/kbot "HTTP/1.1 200 OK"
+  [1;36mINFO[0m  [90m2025-10-02 19:17:48[0m [[1;34mhttpx[0m] HTTP Request: GET https://api.kscale.dev/robots/name/kbot "HTTP/1.1 200 OK"
+  [1;36mINFO[0m  [90m2025-10-02 19:17:48[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+  [1;35mPING[0m  [90m2025-10-02 19:17:49[0m [[1;34mksim.task.rl[0m] Model size: 1,090,861 parameters
 {"ping": {"message": "Model size: 1,090,861 parameters", "filename": "rl.py", "lineno": 1962}}
-  [1;35mPING[0m  [90m2025-10-01 14:47:16[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,181,722 parameters
+  [1;35mPING[0m  [90m2025-10-02 19:17:49[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,181,722 parameters
 {"ping": {"message": "Optimizer size: 2,181,722 parameters", "filename": "rl.py", "lineno": 1963}}
-  [1;36mINFO[0m  [90m2025-10-01 14:47:16[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
-  [1;36mINFO[0m  [90m2025-10-01 14:47:19[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+  [1;36mINFO[0m  [90m2025-10-02 19:17:49[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+  [1;36mINFO[0m  [90m2025-10-02 19:17:52[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
 Job finished

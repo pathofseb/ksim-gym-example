@@ -7,10 +7,11 @@ JAX version:
 JAX version: 0.7.1
 JAX backend:
 JAX backend: gpu
-Testing MuJoCo-JAX compatibility:
-Testing basic MuJoCo model...
-Basic MuJoCo model created successfully
-Testing MJX conversion...
-MJX conversion successful
-MJX data fields: ['__annotations__', '__class__', '__dataclass_fields__', '__dataclass_params__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__match_args__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_impl', 'act', 'act_dot', 'actuator_force', 'bind', 'cam_xmat', 'cam_xpos', 'ctrl', 'cvel', 'eq_active', 'fields', 'geom_xmat', 'geom_xpos', 'impl', 'mocap_pos', 'mocap_quat', 'plugin_state', 'qacc', 'qacc_smooth', 'qacc_warmstart', 'qfrc_actuator', 'qfrc_applied', 'qfrc_bias', 'qfrc_constraint', 'qfrc_fluid', 'qfrc_gravcomp', 'qfrc_inverse', 'qfrc_passive', 'qfrc_smooth', 'qpos', 'qvel', 'replace', 'sensordata', 'site_xmat', 'site_xpos', 'subtree_com', 'ten_length', 'time', 'tree_replace', 'userdata', 'xanchor', 'xaxis', 'xfrc_applied', 'ximat', 'xipos', 'xmat', 'xpos', 'xquat']
+Testing training pipeline step by step:
+1. Importing modules...
+2. Creating task with minimal config...
+3. Creating HumanoidWalkingTask...
+ERROR at step: 'MinimalConfig' object has no attribute 'disable_multiprocessing'
+Error type: AttributeError
+Full traceback:
 Version test finished

@@ -1,0 +1,42 @@
+2025-10-01 15:04:05.526446: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1759323845.547534 3545473 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1759323845.554443 3545473 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1759323845.573752 3545473 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759323845.573791 3545473 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759323845.573801 3545473 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1759323845.573810 3545473 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/ksim-gym-example/train.py:162: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:163: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:164: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:165: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:166: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:167: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+/cluster/work/sebasrb/ksim-gym-example/train.py:249: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+Traceback (most recent call last):
+  File "<string>", line 23, in <module>
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/ksim/task/rl.py", line 629, in __init__
+    super().__init__(config)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/train.py", line 198, in __init__
+    super().__init__(config)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/checkpointing.py", line 188, in __init__
+    super().__init__(config)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/compile.py", line 91, in __init__
+    super().__init__(config)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/data_loader.py", line 70, in __init__
+    super().__init__(config)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/cpu_stats.py", line 224, in __init__
+    super().__init__(config)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/gpu_stats.py", line 235, in __init__
+    super().__init__(config)
+  File "/cluster/home/sebasrb/.local/lib/python3.11/site-packages/xax/task/mixins/process.py", line 38, in __init__
+    if self.config.disable_multiprocessing:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MinimalConfig' object has no attribute 'disable_multiprocessing'
